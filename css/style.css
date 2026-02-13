@@ -9887,3 +9887,253 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+/* details in product */
+/* SECTION BASE */
+.obstetrics {
+  padding: 60px 0;
+  background-color: #fcfdfe;
+}
+
+/* HEADING */
+.heading-section {
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-weight: 800;
+  color: #364b9f;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding-bottom: 10px;
+}
+
+/* INTRO CARD */
+.intro-card {
+  background: #fff;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+}
+
+.card-title {
+  color: #364b9f;
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.card-text {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+}
+
+.inline-link {
+  color: #007bff;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid #007bff;
+}
+
+/* CONDITIONS */
+.conditions {
+  margin-bottom: 50px;
+}
+
+.sub-heading {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.heading-bar {
+  width: 10px;
+  height: 30px;
+  background: #28a745;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+
+.sub-text {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.conditions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.condition-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #eef2f6;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.condition-card strong {
+  color: #007bff;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.condition-card p {
+  font-size: 14.5px;
+  color: #555;
+}
+
+/* ADVANCED CARE */
+.advanced-care {
+  background: #f0f7ff;
+  padding: 40px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+}
+
+.advanced-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a2a6c;
+}
+
+.advanced-text {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+.advanced-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.advanced-card {
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 200px;
+  border-bottom: 3px solid #007bff;
+}
+
+.advanced-card strong {
+  font-size: 15px;
+  color: #333;
+}
+
+.advanced-card p {
+  font-size: 13px;
+  color: #777;
+  margin-top: 5px;
+}
+
+/* PERSONALIZED CARE */
+.personalized {
+  text-align: center;
+  border: 1px solid #007bff33;
+  padding: 30px;
+  border-radius: 15px;
+  background: #fff;
+}
+
+.personalized h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #007bff;
+}
+
+.personalized p {
+  font-size: 16px;
+  color: #555;
+  max-width: 800px;
+  margin: auto;
+}
+/* details in product */
+/* parallex style */
+/* Parallax Section Main */
+.ftco-intro-parallax {
+    background-image: url("../images/DSC09131.JPG");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    padding: 120px 0;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Dark Overlay */
+.parallax-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+/* Typography */
+.parallax-title {
+    color: #ffffff;
+    font-weight: 900;
+    font-size: clamp(26px, 7vw, 48px);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.9);
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.parallax-text {
+    color: #f1f1f1;
+    font-size: clamp(16px, 4.5vw, 20px);
+    font-weight: 500;
+    margin-bottom: 30px;
+    text-shadow: 1px 2px 10px rgba(0, 0, 0, 0.7);
+    line-height: 1.4;
+}
+
+/* Button Style */
+.btn-parallax-location {
+    background: #007bff;
+    color: #fff !important;
+    border-radius: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 15px;
+    padding: 14px 40px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: 2px solid #007bff;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+}
+
+.btn-parallax-location:hover {
+    background: #fff;
+    color: #007bff !important;
+    transform: translateY(-2px);
+    border-color: #fff;
+}
+
+/* Mobile Fix for Parallax (iOS fix) */
+@media (max-width: 768px) {
+    .ftco-intro-parallax {
+        background-attachment: scroll; /* Smoother on mobile devices */
+        padding: 80px 0;
+    }
+}
+/* parallex */
