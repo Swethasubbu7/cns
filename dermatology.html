@@ -142,21 +142,36 @@
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav nav ml-auto">
             <li class="nav-item">
-              <a href="#home-section" class="nav-link"><span>Home</span></a>
+              <a href="index.html" class="nav-link"><span>Home</span></a>
             </li>
             <li class="nav-item">
-              <a href="#about-section" class="nav-link"><span>About</span></a>
+              <a href="index.html#about" class="nav-link"><span>About</span></a>
             </li>
             <li class="nav-item">
-              <a href="#facility" class="nav-link"><span>Facility</span></a>
+              <a href="index.html#departments" class="nav-link"
+                ><span>Department</span></a
+              >
             </li>
             <li class="nav-item">
-              <a href="#contact-section" class="nav-link"
+              <a href="index.html#doctors" class="nav-link"
+                ><span>Doctors</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="index.html#facility" class="nav-link"
+                ><span>Facility</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="index.html#blog" class="nav-link"><span>Blog</span></a>
+            </li>
+            <li class="nav-item">
+              <a href="index.html#contact" class="nav-link"
                 ><span>Contact</span></a
               >
             </li>
             <li class="nav-item cta mr-md-2">
-              <a href="#appointment" class="nav-link">Appointment</a>
+              <a href="index.html#appointment" class="nav-link">Appointment</a>
             </li>
           </ul>
         </div>
@@ -208,74 +223,86 @@
       <div class="ftco-section ftco-no-pt ftco-no-pb ftco-services-2 bg-light">
         <div class="container">
           <div class="row d-flex">
-            <div class="col-md-7 py-5">
+            <!-- SERVICES COLUMN -->
+            <div class="col-lg-7 col-md-12 py-5">
               <div class="py-lg-5">
                 <div class="row justify-content-center pb-5">
                   <div class="col-md-12 heading-section ftco-animate">
                     <h2 class="mb-3">Premium Medical Services</h2>
                   </div>
                 </div>
+
                 <div class="row">
+                  <!-- Service 1 -->
                   <div class="col-md-6 d-flex align-self-stretch ftco-animate">
                     <div class="media block-6 services d-flex">
                       <div
-                        class="icon justify-content-center align-items-center d-flex"
+                        class="icon d-flex justify-content-center align-items-center"
                       >
                         <span class="flaticon-ambulance"></span>
                       </div>
                       <div class="media-body pl-md-4">
-                        <h3 class="heading mb-3">Emergency Services</h3>
+                        <h3 class="heading mb-3">Emergency Critical Care</h3>
                         <p>
-                          A small river named Duden flows by their place and
-                          supplies it with the necessary regelialia.
+                          Immediate ICU intervention for life-threatening
+                          conditions with continuous monitoring and rapid
+                          response.
                         </p>
                       </div>
                     </div>
                   </div>
+
+                  <!-- Service 2 -->
                   <div class="col-md-6 d-flex align-self-stretch ftco-animate">
                     <div class="media block-6 services d-flex">
                       <div
-                        class="icon justify-content-center align-items-center d-flex"
+                        class="icon d-flex justify-content-center align-items-center"
                       >
                         <span class="flaticon-doctor"></span>
                       </div>
                       <div class="media-body pl-md-4">
-                        <h3 class="heading mb-3">Qualified Doctors</h3>
+                        <h3 class="heading mb-3">
+                          Intensivists & Anesthesiologists
+                        </h3>
                         <p>
-                          A small river named Duden flows by their place and
-                          supplies it with the necessary regelialia.
+                          Experienced ICU doctors ensuring safe anesthesia, pain
+                          management, and expert critical care.
                         </p>
                       </div>
                     </div>
                   </div>
+
+                  <!-- Service 3 -->
                   <div class="col-md-6 d-flex align-self-stretch ftco-animate">
                     <div class="media block-6 services d-flex">
                       <div
-                        class="icon justify-content-center align-items-center d-flex"
+                        class="icon d-flex justify-content-center align-items-center"
                       >
                         <span class="flaticon-stethoscope"></span>
                       </div>
                       <div class="media-body pl-md-4">
-                        <h3 class="heading mb-3">Outdoors Checkup</h3>
+                        <h3 class="heading mb-3">Advanced Life Support</h3>
                         <p>
-                          A small river named Duden flows by their place and
-                          supplies it with the necessary regelialia.
+                          Fully equipped ICU with ventilators, monitors, and
+                          advanced life-support systems.
                         </p>
                       </div>
                     </div>
                   </div>
+
+                  <!-- Service 4 -->
                   <div class="col-md-6 d-flex align-self-stretch ftco-animate">
                     <div class="media block-6 services d-flex">
                       <div
-                        class="icon justify-content-center align-items-center d-flex"
+                        class="icon d-flex justify-content-center align-items-center"
                       >
                         <span class="flaticon-24-hours"></span>
                       </div>
                       <div class="media-body pl-md-4">
-                        <h3 class="heading mb-3">24 Hours Service</h3>
+                        <h3 class="heading mb-3">24×7 ICU Monitoring</h3>
                         <p>
-                          A small river named Duden flows by their place and
-                          supplies it with the necessary regelialia.
+                          Continuous monitoring by trained ICU staff ensuring
+                          rapid response and patient safety.
                         </p>
                       </div>
                     </div>
@@ -283,109 +310,116 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-5 d-flex">
+
+            <!-- APPOINTMENT FORM -->
+            <div class="col-lg-5 col-md-12 d-flex mt-md-4">
               <div
-                class="appointment-wrap bg-white p-4 p-md-5 d-flex align-items-center"
+                class="appointment-wrap p-2 p-md-2 d-flex align-items-center w-100"
                 id="appointment"
               >
                 <form
                   action="submit.php"
                   method="post"
-                  class="appointment-form ftco-animate"
+                  class="appointment-form ftco-animate bg-white p-4 w-100"
                 >
                   <h3>Free Consultation</h3>
-                  <div class="">
-                    <div class="form-group">
-                      <input
-                        type="text"
-                        name="name"
-                        class="form-control"
-                        placeholder="Name"
-                        required
-                      />
-                    </div>
+
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name="name"
+                      class="form-control"
+                      placeholder="Name"
+                      required
+                    />
                   </div>
-                  <div class="">
-                    <div class="form-group">
-                      <div class="form-field">
-                        <div class="select-wrap">
-                          <div class="icon">
-                            <span class="ion-ios-arrow-down"></span>
-                          </div>
-                          <select
-                            name="service"
-                            id="Select Your Services"
-                            class="form-control"
-                            required
-                          >
-                            <option value="">Select Your Services</option>
-                            <option value="Neurology">Neurology</option>
-                            <option value="Cardiology">Cardiology</option>
-                            <option value="Dental">Dental</option>
-                            <option value="Ophthalmology">Ophthalmology</option>
-                            <option value="Other Services">
-                              Other Services
-                            </option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <input
-                        type="text"
-                        name="phone"
-                        class="form-control"
-                        placeholder="Phone"
-                        required
-                      />
-                    </div>
+
+                  <div class="form-group">
+                    <select name="service" class="form-control" required>
+                      <option value="">Select Your Services</option>
+                      <option>General Medicine Consultation</option>
+                      <option>Diabetes</option>
+                      <option>Neurology Consultation</option>
+                      <option>Neurosurgery Consultation</option>
+                      <option>Cardiology Consultation</option>
+                      <option>Orthopaedics & Spine Care</option>
+                      <option>Obstetrics & Gynaecology</option>
+                      <option>Paediatrics</option>
+                      <option>Critical Care / ICU Consultation</option>
+                      <option>Emergency Services</option>
+                      <option>Radiology</option>
+                      <option>Anaesthesiology</option>
+                      <option>Dermatology (Skin & Hair)</option>
+                      <option>Pulmonology (Lung & Allergy)</option>
+                      <option>Nephrology (Kidney Care)</option>
+                      <option>Urology</option>
+                      <option>ENT (Ear, Nose & Throat)</option>
+                      <option>Psychiatry (Mental Health)</option>
+                      <option>Plastic & Reconstructive Surgery</option>
+                      <option>Surgical Gastroenterology</option>
+                      <option>Facio Maxillary Surgery</option>
+                      <option>Paediatric Surgery</option>
+                      <option>Physiotherapy</option>
+                      <option value="Other Services">Other Services</option>
+                    </select>
                   </div>
-                  <div class="">
-                    <div class="form-group">
-                      <div class="input-wrap">
-                        <div class="icon">
-                          <span class="ion-md-calendar"></span>
-                        </div>
-                        <input
-                          type="text"
-                          name="date"
-                          class="form-control appointment_date"
-                          placeholder="Date"
-                        />
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="input-wrap">
-                        <div class="icon">
-                          <span class="ion-ios-clock"></span>
-                        </div>
-                        <input
-                          type="text"
-                          name="time"
-                          class="form-control appointment_time"
-                          placeholder="Time"
-                        />
-                      </div>
-                    </div>
+
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name="phone"
+                      class="form-control"
+                      placeholder="Phone"
+                      required
+                    />
                   </div>
-                  <div class="">
-                    <div class="form-group">
-                      <textarea
-                        name="message"
-                        cols="30"
-                        rows="2"
-                        class="form-control"
-                        placeholder="Message"
-                        required
-                      ></textarea>
-                    </div>
-                    <div class="form-group">
-                      <input
-                        type="submit"
-                        value="Appointment"
-                        class="btn btn-secondary py-3 px-4"
-                      />
-                    </div>
+
+                  <div class="form-group">
+                    <input
+                      type="date"
+                      name="date"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <select class="form-control" required id="sessionSelect">
+                      <option value="">Select Session</option>
+                      <option value="morning">Morning</option>
+                      <option value="afternoon">Afternoon</option>
+                    </select>
+                  </div>
+
+                  <!-- TIME SLOTS -->
+                  <div class="form-group">
+                    <select
+                      name="time"
+                      class="form-control"
+                      required
+                      id="timeSlots"
+                      disabled
+                    >
+                      <option value="">Select Time Slot</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <textarea
+                      name="message"
+                      rows="2"
+                      class="form-control"
+                      placeholder="Message"
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group">
+                    <input
+                      type="submit"
+                      value="Appointment"
+                      class="btn btn-secondary py-3 px-4 w-100"
+                    />
                   </div>
                 </form>
               </div>
@@ -396,123 +430,136 @@
     </section>
 
     <!-- Content -->
-    <section class="content" id="facility">
+    <section class="content obstetrics" id="facility">
       <div class="container">
-        <div class="col-md-12 heading-section ftco-animate">
-          <h2 class="mb-3">Dermatology & Aesthetics</h2>
+        <div class="heading-section text-center">
+          <h2 class="section-title">DERMATOLOGY & AESTHETICS</h2>
         </div>
-        <div class="media-body pl-md-4">
-          <h3 class="heading mb-3">
-            Exceptional Care for Skin and Aesthetic Needs
+
+        <div class="media-body intro-card">
+          <h3 class="card-title">
+            Exceptional Care for Skin and Aesthetic Needs at CNS Super
+            Speciality Hospital
           </h3>
-          <p>
-            At CNS Super Speciality Hospital,recognized as a leading
-            dermatologist in Tirupur, we offer top-tier
-            <a href="https://en.wikipedia.org/wiki/Dermatology">
-              dermatology
-            </a>
-            and aesthetics services to address a wide range of skin and cosmetic
-            concerns. Our expert team, known for excellence in dermatology in
-            Tiruppur, is dedicated to enhancing your skin health and appearance
-            with personalized and advanced care.
+          <p class="card-text">
+            At <strong>CNS Super Speciality Hospital</strong>, recognized for
+            excellence in dermatology in Tiruppur, our Dermatology & Aesthetics
+            Department provides advanced and personalized care for a wide range
+            of skin, hair, and cosmetic concerns. Our expert dermatologists
+            combine medical expertise with modern technology to enhance skin
+            health and appearance.
           </p>
-          <style>
-            a {
-              color: blue;
-            }
-          </style>
         </div>
-        <div class="media-body pl-md-4">
-          <h3 class="heading mb-3">Conditions We Treat</h3>
-          <p>
-            Our dermatology and aesthetics services cover a broad spectrum of
-            conditions, including:
+
+        <div class="media-body conditions">
+          <h3 class="sub-heading">
+            <span class="heading-bar"></span>Conditions We Treat
+          </h3>
+          <p class="sub-text">
+            Known for having the
+            <strong>best dermatologist in Tiruppur</strong>, our team offers
+            comprehensive care for medical and aesthetic skin conditions.
           </p>
-          <ul>
-            <li>
-              Acne and Acne Scarring
+
+          <div class="conditions-grid">
+            <div class="condition-card">
+              <strong>Acne and Acne Scarring</strong>
               <p>
-                Effective treatments for acne and strategies to reduce the
-                appearance of scars, helping you achieve clear and smooth skin.
+                Effective acne treatments and advanced solutions to reduce
+                scarring, helping achieve clear and smooth skin.
               </p>
-            </li>
-            <li>
-              Eczema and Psoriasis
+            </div>
+
+            <div class="condition-card">
+              <strong>Eczema and Psoriasis</strong>
               <p>
-                Specialized care for chronic skin conditions to manage symptoms
-                and improve overall skin health.
+                Specialized care for chronic skin conditions to control symptoms
+                and improve long-term skin health.
               </p>
-            </li>
-            <li>
-              Skin Cancer Screening and Treatment
+            </div>
+
+            <div class="condition-card">
+              <strong>Skin Cancer Screening</strong>
               <p>
-                Comprehensive evaluations and treatments for skin cancers,
-                emphasizing early detection and preventive care.
+                Comprehensive evaluation and treatment of skin cancers with a
+                focus on early detection and prevention.
               </p>
-            </li>
-            <li>
-              Hyperpigmentation and Melasma
+            </div>
+
+            <div class="condition-card">
+              <strong>Hyperpigmentation and Melasma</strong>
               <p>
-                Targeted solutions for dark spots and uneven skin tone to
-                restore a uniform complexion.
+                Targeted therapies to treat dark spots, uneven skin tone, and
+                restore natural complexion.
               </p>
-            </li>
-            <li>
-              Hair Loss
+            </div>
+
+            <div class="condition-card">
+              <strong>Hair Loss</strong>
               <p>
-                Advanced therapies to address various types of hair loss and
-                promote natural regrowth.
+                Advanced treatments to address hair thinning and hair loss while
+                promoting natural regrowth.
               </p>
-            </li>
-          </ul>
-          <h3 class="heading mb-3">
+            </div>
+          </div>
+        </div>
+
+        <div class="media-body advanced-care">
+          <h3 class="advanced-title">
             Advanced Diagnostic and Treatment Options
           </h3>
-          <p>
-            As the top dermatologist in Tiruppur, we use the latest technology
-            and techniques to ensure precise diagnoses and effective treatments:
+          <p class="advanced-text">
+            Our Dermatology & Aesthetics department in Tiruppur is equipped with
+            state-of-the-art technology to deliver accurate diagnosis and
+            effective skin treatments.
           </p>
-          <ul>
-            <li>
-              High-Resolution Diagnostic Imaging
+
+          <div class="advanced-grid">
+            <div class="advanced-card">
+              <strong>High-Resolution Skin Imaging</strong>
               <p>
-                State-of-the-art imaging tools for detailed skin assessments and
-                accurate diagnosis.
+                Advanced diagnostic tools for detailed skin assessment and
+                accurate treatment planning.
               </p>
-            </li>
-            <li>
-              Laser Therapy
+            </div>
+
+            <div class="advanced-card">
+              <strong>Laser Therapy</strong>
               <p>
-                Cutting-edge laser treatments for skin resurfacing, pigmentation
-                correction, and hair removal, providing effective results with
-                minimal downtime.
+                Modern laser treatments for pigmentation, skin resurfacing, and
+                hair removal with minimal downtime.
               </p>
-            </li>
-            <li>
-              Injectable Treatments
+            </div>
+
+            <div class="advanced-card">
+              <strong>Injectable Treatments</strong>
               <p>
-                Expertly administered Botox and dermal fillers to smooth
-                wrinkles, restore volume, and enhance facial features.
+                Expert administration of Botox and dermal fillers to reduce
+                wrinkles and enhance facial contours.
               </p>
-            </li>
-            <li>
-              Customized Skincare Solutions
+            </div>
+
+            <div class="advanced-card">
+              <strong>Customized Skincare Solutions</strong>
               <p>
-                Personalized skincare regimens and treatments designed to
-                address your specific skin concerns and goals.
+                Personalized skincare regimens designed to meet individual skin
+                goals and concerns.
               </p>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
-        <div class="media-body pl-md-4">
-          <h3 class="heading mb-3">Personalized Care and Support</h3>
+
+        <div class="media-body personalized">
+          <h3>Personalized Care and Support</h3>
           <p>
-            At CNS Super Speciality Hospital, recognized as the leading
-            dermatologist in Tiruppur, we prioritize personalized care to ensure
-            each patient receives the attention and support they need throughout
-            their treatment journey. Choose us for a dermatological experience
-            where personalized care and dedicated support come together to
-            enhance your skin health and overall well-being.
+            At CNS Super Speciality Hospital, recognized as a leading
+            dermatology center in Tiruppur, we focus on a patient-centered
+            approach to skin and aesthetic care.
+          </p>
+          <p>
+            Our dermatologists take time to understand each patient’s skin type,
+            lifestyle, and concerns, ensuring customized treatments with
+            compassionate support for long-lasting results and confidence.
           </p>
         </div>
       </div>
@@ -520,25 +567,26 @@
 
     <!-- Image-Section -->
 
-    <section
-      class="ftco-intro img"
-      style="background-image: url(images/cns-fecility-bg.jpeg)"
-    >
-      <div class="overlay"></div>
+    <section class="ftco-intro-parallax">
+      <div class="parallax-overlay"></div>
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-md-9 text-center">
-            <h2>BEST DERMOTOLOGIST IN TIRUPPUR</h2>
-            <p>
-              We believe that health is wealth, and we are here to protect yours
+          <div class="col-md-9 text-center intro-content">
+            <h2 class="parallax-title">BEST DERMOTOLOGIST IN TIRUPPUR</h2>
+
+            <p class="parallax-text">
+              We believe that health is wealth, <br class="d-md-none" />
+              and we are here to protect yours
             </p>
-            <p class="mb-0">
+
+            <div class="mb-0">
               <a
-                href="https://maps.app.goo.gl/Aj21xmZDjPxV3zjB9"
-                class="btn btn-white px-4 py-3"
-                >Location</a
+                href="https://maps.app.goo.gl/YourLinkHere"
+                class="btn-parallax-location"
               >
-            </p>
+                Get Location
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -594,7 +642,9 @@
               </div>
               <h3 class="mb-4">Email Address</h3>
               <p>
-                <a href="mailto:cnsneurohospital@gmail.com">cns@gmail.com</a>
+                <a href="mailto:cnsneurohospital@gmail.com"
+                  >cnsneurohospital@gmail.com</a
+                >
               </p>
             </div>
           </div>
@@ -821,7 +871,7 @@
               </script>
               CNS | Developed By
               <a href="https://paletteproduction.com/" target="_blank"
-                >PALETTE PRODUCTON</a
+                >PALETTE PRODUCTION</a
               >
               <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
@@ -874,5 +924,45 @@
     <script src="js/scrollax.min.js"></script>
 
     <script src="js/main.js"></script>
+
+    <!-- TIME SLOT SCRIPT -->
+    <script>
+      const sessionSelect = document.getElementById("sessionSelect");
+      const timeSlots = document.getElementById("timeSlots");
+
+      sessionSelect.addEventListener("change", function () {
+        timeSlots.innerHTML = '<option value="">Select Time Slot</option>';
+        timeSlots.disabled = false;
+
+        let startHour, endHour;
+
+        if (this.value === "morning") {
+          startHour = 9; // 9 AM
+          endHour = 12; // 12 PM
+        } else if (this.value === "afternoon") {
+          startHour = 13; // 1 PM
+          endHour = 17; // 5 PM
+        }
+
+        for (let hour = startHour; hour < endHour; hour++) {
+          for (let min = 0; min < 60; min += 15) {
+            // Convert to 12-hour format
+            let displayHour = hour % 12 || 12;
+            let period = hour >= 12 ? "PM" : "AM";
+            let minutes = min.toString().padStart(2, "0");
+
+            let option = document.createElement("option");
+
+            // value can stay 24hr (better for backend)
+            option.value = `${hour.toString().padStart(2, "0")}:${minutes}`;
+
+            // text shown to user (12hr)
+            option.textContent = `${displayHour}:${minutes} ${period}`;
+
+            timeSlots.appendChild(option);
+          }
+        }
+      });
+    </script>
   </body>
 </html>
