@@ -613,7 +613,7 @@
               <h3 class="mb-4">Address</h3>
               <p>
                 <a href="https://maps.app.goo.gl/Aj21xmZDjPxV3zjB9"
-                  >5/647,  Avinashi Main Road ,Anaipudur Palangarai post, Tirupur -641654</a
+                  >5/647,  Avinashi Main Road , Anaipudur Palangarai post , Tirupur -641654</a
 >
               </p>
             </div>
@@ -759,7 +759,7 @@
             	<h2 class="ftco-heading-2">Have a Questions?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                <li><a href="https://maps.app.goo.gl/Aj21xmZDjPxV3zjB9"><span class="icon icon-map-marker"></span><span class="text">5/647, Avinashi Main Road ,Anaipudur Palangarai post, Tirupur - 641654</span></a></li>
+	                <li><a href="https://maps.app.goo.gl/Aj21xmZDjPxV3zjB9"><span class="icon icon-map-marker"></span><span class="text">5/647, Avinashi Main Road , Anaipudur Palangarai post , Tirupur - 641654</span></a></li>
 	                <li><a href="tel://7530055886"><span class="icon icon-phone"></span><span class="text">+91 75300 55886</span></a></li>
 	                <li><a href="mailto:cnsneurohospital@gmail.com"><span class="icon icon-envelope pr-4"></span><span class="text">cnsneurohospital@gmail.com</span></a></li>
 	              </ul>
@@ -804,6 +804,43 @@
   <script src="js/scrollax.min.js"></script>
   
   <script src="js/main.js"></script>
-    
+    <script>
+      const sessionSelect = document.getElementById("sessionSelect");
+      const timeSlots = document.getElementById("timeSlots");
+
+      sessionSelect.addEventListener("change", function () {
+        timeSlots.innerHTML = '<option value="">Select Time Slot</option>';
+        timeSlots.disabled = false;
+
+        let startHour, endHour;
+
+        if (this.value === "morning") {
+          startHour = 9; // 9 AM
+          endHour = 12; // 12 PM
+        } else if (this.value === "afternoon") {
+          startHour = 13; // 1 PM
+          endHour = 17; // 5 PM
+        }
+
+        for (let hour = startHour; hour < endHour; hour++) {
+          for (let min = 0; min < 60; min += 15) {
+            // Convert to 12-hour format
+            let displayHour = hour % 12 || 12;
+            let period = hour >= 12 ? "PM" : "AM";
+            let minutes = min.toString().padStart(2, "0");
+
+            let option = document.createElement("option");
+
+            // value can stay 24hr (better for backend)
+            option.value = `${hour.toString().padStart(2, "0")}:${minutes}`;
+
+            // text shown to user (12hr)
+            option.textContent = `${displayHour}:${minutes} ${period}`;
+
+            timeSlots.appendChild(option);
+          }
+        }
+      });
+    </script>
   </body>
 </html>
