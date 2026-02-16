@@ -182,45 +182,40 @@
       }
     </style>
 
-    <section
-      class="hero-wrap js-fullheight"
-      style="background-image: url(&quot;images/hero-bg-2.jpeg&quot;)"
-      data-section="home"
-      data-stellar-background-ratio="0.5"
-      id="home"
-    >
-      <div class="overlay"></div>
-      <div class="container">
+    <section class="hero-wrap js-fullheight" data-section="home" id="home">
+      <div class="overlay-banner"></div>
+
+      <!-- Slider images -->
+      <div class="hero-slider">
         <div
-          class="row no-gutters slider-text js-fullheight align-items-center justify-content-start"
-          data-scrollax-parent="true"
+          class="slide active"
+          style="background-image: url(&quot;images/banner.png&quot;)"
+        ></div>
+        <div
+          class="slide"
+          style="background-image: url(&quot;images/banner2cns.png&quot;)"
+        ></div>
+      </div>
+
+      <div class="container hero-content">
+        <div
+          class="row no-gutters slider-text js-fullheight align-items-center"
         >
           <div class="col-md-6 pt-5 ftco-animate">
             <div class="mt-5">
               <h1 class="mb-4">Super Speciality Hospital in Tiruppur</h1>
-              <style>
-                .slider-text h1 {
-                  color: #fff;
-                  font-weight: 700;
-                  font-size: 64px;
-                  line-height: 75px;
-                }
-                @media (max-width: 576px) {
-                  .button-container {
-                    padding-left: 8rem;
-                  }
-                }
-              </style>
               <p class="mb-4">
                 CNS Super Speciality Hospital in Tiruppur provides excellent
-                medical care and compassionate support. Our dedication to your
-                well-being ensures you receive the greatest care and customized
-                attention throughout your healthcare experience.
+                medical care and compassionate support.
               </p>
               <p>
-                <a href="#appointment" class="btn btn-primary py-3 px-4"
-                  >Make an appointment</a
+                <a
+                  href="#"
+                  class="btn btn-primary py-3 px-4"
+                  onclick="scrollToAppointment()"
                 >
+                  Make an appointment
+                </a>
               </p>
             </div>
           </div>
@@ -228,179 +223,268 @@
       </div>
     </section>
 
+    <style>
+      .hero-wrap {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+
+      .hero-slider .slide {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 1.2s ease-in-out;
+      }
+
+      .hero-slider .slide.active {
+        opacity: 1;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 3;
+      }
+
+      .overlay-banner {
+        position: absolute;
+        inset: 0;
+        /* background: rgba(0, 0, 0, 0.5);  */
+        z-index: 2;
+      }
+    </style>
+
     <!-- About and Appointment -->
 
-   <section
-  class="ftco-counter img ftco-section ftco-no-pt ftco-no-pb"
-  id="about-section"
->
-  <div class="ftco-section ftco-no-pt ftco-no-pb ftco-services-2 bg-light">
-    <div class="container">
-      <div class="row d-flex">
-
-        <!-- LEFT SERVICES SECTION -->
-        <div class="col-md-7 py-5">
-          <div class="py-lg-5">
-            <div class="row justify-content-center pb-5">
-              <div class="col-md-12 heading-section ftco-animate">
-                <h2 class="mb-3">Premium Medical Services</h2>
-              </div>
-            </div>
-
-            <div class="row">
-
-              <!-- Service 1 -->
-              <div class="col-md-6 d-flex align-self-stretch ftco-animate">
-                <div class="media block-6 services d-flex">
-                  <div class="icon justify-content-center align-items-center d-flex">
-                    <span class="flaticon-ambulance"></span>
-                  </div>
-                  <div class="media-body pl-md-4">
-                    <h3 class="heading mb-3">Emergency & Critical Care</h3>
-                    <p>
-                      24/7 emergency medical care with advanced facilities and rapid response team.
-                    </p>
+    <section
+      class="ftco-counter img ftco-section ftco-no-pt ftco-no-pb"
+      id="about-section"
+    >
+      <div class="ftco-section ftco-no-pt ftco-no-pb ftco-services-2 bg-light">
+        <div class="container">
+          <div class="row d-flex">
+            <!-- LEFT SERVICES SECTION -->
+            <div class="col-md-7 py-5">
+              <div class="py-lg-5">
+                <div class="row justify-content-center pb-5">
+                  <div class="col-md-12 heading-section ftco-animate">
+                    <h2 class="mb-3">Premium Medical Services</h2>
                   </div>
                 </div>
-              </div>
 
-              <!-- Service 2 -->
-              <div class="col-md-6 d-flex align-self-stretch ftco-animate">
-                <div class="media block-6 services d-flex">
-                  <div class="icon justify-content-center align-items-center d-flex">
-                    <span class="flaticon-doctor"></span>
-                  </div>
-                  <div class="media-body pl-md-4">
-                    <h3 class="heading mb-3">Multi-Specialty Treatments</h3>
-                    <p>
-                      Expert doctors across medicine, surgery, orthopaedics, neurology, cardiology, and more.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Service 3 -->
-              <div class="col-md-6 d-flex align-self-stretch ftco-animate">
-                <div class="media block-6 services d-flex">
-                  <div class="icon justify-content-center align-items-center d-flex">
-                    <span class="flaticon-stethoscope"></span>
-                  </div>
-                  <div class="media-body pl-md-4">
-                    <h3 class="heading mb-3">Advanced Diagnostics</h3>
-                    <p>
-                      Modern laboratory, imaging, and diagnostic services for accurate treatment.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Service 4 -->
-              <div class="col-md-6 d-flex align-self-stretch ftco-animate">
-                <div class="media block-6 services d-flex">
-                  <div class="icon justify-content-center align-items-center d-flex">
-                    <span class="flaticon-24-hours"></span>
-                  </div>
-                  <div class="media-body pl-md-4">
-                    <h3 class="heading mb-3">24×7 Patient Care</h3>
-                    <p>
-                      Continuous patient monitoring with compassionate and professional healthcare staff.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-        <!-- RIGHT APPOINTMENT FORM -->
-        <div class="col-md-5 d-flex">
-          <div class="appointment-wrap p-2 p-md-2 d-flex align-items-center" id="appointment">
-            <form action="submit.php" method="post" class="appointment-form ftco-animate bg-white p-4">
-              <h3>Free Consultation</h3>
-
-              <div class="form-group">
-                <input type="text" name="name" class="form-control" placeholder="Name" required />
-              </div>
-
-              <div class="form-group">
-                <div class="form-field">
-                  <div class="select-wrap">
-                    <div class="icon">
-                      <span class="ion-ios-arrow-down"></span>
+                <div class="row">
+                  <!-- Service 1 -->
+                  <div class="col-md-6 d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services d-flex">
+                      <div
+                        class="icon justify-content-center align-items-center d-flex"
+                      >
+                        <span class="flaticon-ambulance"></span>
+                      </div>
+                      <div class="media-body pl-md-4">
+                        <h3 class="heading mb-3">Emergency & Critical Care</h3>
+                        <p>
+                          24/7 emergency medical care with advanced facilities
+                          and rapid response team.
+                        </p>
+                      </div>
                     </div>
-                    <select name="service" class="form-control" required>
-                      <option value="">Select Your Services</option>
-                      <option>General Medicine</option>
-                      <option>Neurology</option>
-                      <option>Neurosurgery</option>
-                      <option>Cardiology</option>
-                      <option>Orthopaedics</option>
-                      <option>Gynaecology</option>
-                      <option>Paediatrics</option>
-                      <option>Critical Care</option>
-                      <option>Emergency</option>
-                      <option>Radiology</option>
-                      <option>Dermatology</option>
-                      <option>Pulmonology</option>
-                      <option>Nephrology</option>
-                      <option>Urology</option>
-                      <option>ENT</option>
-                      <option>Psychiatry</option>
-                      <option>Physiotherapy</option>
-                      <option>Other Services</option>
+                  </div>
+
+                  <!-- Service 2 -->
+                  <div class="col-md-6 d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services d-flex">
+                      <div
+                        class="icon justify-content-center align-items-center d-flex"
+                      >
+                        <span class="flaticon-doctor"></span>
+                      </div>
+                      <div class="media-body pl-md-4">
+                        <h3 class="heading mb-3">Multi-Specialty Treatments</h3>
+                        <p>
+                          Expert doctors across medicine, surgery, orthopaedics,
+                          neurology, cardiology, and more.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Service 3 -->
+                  <div class="col-md-6 d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services d-flex">
+                      <div
+                        class="icon justify-content-center align-items-center d-flex"
+                      >
+                        <span class="flaticon-stethoscope"></span>
+                      </div>
+                      <div class="media-body pl-md-4">
+                        <h3 class="heading mb-3">Advanced Diagnostics</h3>
+                        <p>
+                          Modern laboratory, imaging, and diagnostic services
+                          for accurate treatment.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Service 4 -->
+                  <div class="col-md-6 d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services d-flex">
+                      <div
+                        class="icon justify-content-center align-items-center d-flex"
+                      >
+                        <span class="flaticon-24-hours"></span>
+                      </div>
+                      <div class="media-body pl-md-4">
+                        <h3 class="heading mb-3">24×7 Patient Care</h3>
+                        <p>
+                          Continuous patient monitoring with compassionate and
+                          professional healthcare staff.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT APPOINTMENT FORM -->
+            <div class="col-md-5 d-flex" id="appointment">
+              <div
+                class="appointment-wrap p-2 p-md-2 d-flex align-items-center"
+              >
+                <form
+                  action="submit.php"
+                  method="post"
+                  class="appointment-form ftco-animate bg-white p-4"
+                >
+                  <h3>Free Consultation</h3>
+
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name="name"
+                      class="form-control"
+                      placeholder="Name"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <div class="form-field">
+                      <div class="select-wrap">
+                        <div class="icon">
+                          <span class="ion-ios-arrow-down"></span>
+                        </div>
+                        <select name="service" class="form-control" required>
+                          <option value="">Select Your Services</option>
+                          <option>General Medicine</option>
+                          <option>Neurology</option>
+                          <option>Neurosurgery</option>
+                          <option>Cardiology</option>
+                          <option>Orthopaedics</option>
+                          <option>Gynaecology</option>
+                          <option>Paediatrics</option>
+                          <option>Critical Care</option>
+                          <option>Emergency</option>
+                          <option>Radiology</option>
+                          <option>Dermatology</option>
+                          <option>Pulmonology</option>
+                          <option>Nephrology</option>
+                          <option>Urology</option>
+                          <option>ENT</option>
+                          <option>Psychiatry</option>
+                          <option>Physiotherapy</option>
+                          <option>Other Services</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name="phone"
+                      class="form-control"
+                      placeholder="Phone"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <input
+                      type="date"
+                      name="date"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <select class="form-control" id="sessionSelect" required>
+                      <option value="">Select Session</option>
+                      <option value="morning">Morning</option>
+                      <option value="afternoon">Afternoon</option>
                     </select>
                   </div>
-                </div>
-              </div>
 
-              <div class="form-group">
-                <input type="text" name="phone" class="form-control" placeholder="Phone" required />
-              </div>
+                  <div class="form-group">
+                    <select
+                      name="time"
+                      class="form-control"
+                      required
+                      id="timeSlots"
+                      disabled
+                    >
+                      <option value="">Select Time Slot</option>
+                    </select>
+                  </div>
 
-              <div class="form-group">
-                <input type="date" name="date" class="form-control" required />
-              </div>
+                  <div class="form-group">
+                    <textarea
+                      name="message"
+                      rows="2"
+                      class="form-control"
+                      placeholder="Message"
+                    ></textarea>
+                  </div>
 
-              <div class="form-group">
-                <select class="form-control" id="sessionSelect" required>
-                  <option value="">Select Session</option>
-                  <option value="morning">Morning</option>
-                  <option value="afternoon">Afternoon</option>
-                </select>
+                  <div class="form-group">
+                    <input
+                      type="submit"
+                      value="Book Appointment"
+                      class="btn btn-secondary py-3 px-4"
+                    />
+                  </div>
+                </form>
               </div>
-
-              <div class="form-group">
-                <select name="time" class="form-control" required id="timeSlots" disabled>
-                  <option value="">Select Time Slot</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <textarea name="message" rows="2" class="form-control" placeholder="Message"></textarea>
-              </div>
-
-              <div class="form-group">
-                <input type="submit" value="Book Appointment" class="btn btn-secondary py-3 px-4" />
-              </div>
-
-            </form>
+            </div>
           </div>
         </div>
-
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- Image-Section -->
 
-   <section class="ftco-intro-parallax">
+    <section class="ftco-intro-parallax">
       <div class="parallax-overlay"></div>
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-9 text-center intro-content">
-            <h2 class="parallax-title">BEST SUPER SPECIALITY HOSPITAL IN TIRUPPUR</h2>
+            <h2 class="parallax-title">
+              BEST SUPER SPECIALITY HOSPITAL IN TIRUPPUR
+            </h2>
 
             <p class="parallax-text">
               We believe that health is wealth, <br class="d-md-none" />
@@ -437,9 +521,7 @@
                 <div class="icon">
                   <span class="flaticon-stethoscope"></span>
                 </div>
-                <a href="neurology.html"
-                  ><h3>NEURO & SPINE SURGERY</h3></a
-                >
+                <a href="neurology.html"><h3>NEURO & SPINE SURGERY</h3></a>
               </div>
             </div>
             <div class="department-wrap p-4 ftco-animate">
@@ -457,9 +539,7 @@
                 <div class="icon">
                   <span class="flaticon-stethoscope"></span>
                 </div>
-                <a href="cardiology.html"
-                  ><h3>CARDIOLOGY</h3></a
-                >
+                <a href="cardiology.html"><h3>CARDIOLOGY</h3></a>
               </div>
             </div>
             <div class="department-wrap p-4 ftco-animate">
@@ -596,7 +676,9 @@
                 <div class="icon">
                   <span class="flaticon-stethoscope"></span>
                 </div>
-                <a href="paediatric-surgery.html"><h3>PAEDIATRIC SURGERY</h3></a>
+                <a href="paediatric-surgery.html"
+                  ><h3>PAEDIATRIC SURGERY</h3></a
+                >
               </div>
             </div>
             <div class="department-wrap p-4 ftco-animate">
@@ -612,9 +694,7 @@
                 <div class="icon">
                   <span class="flaticon-stethoscope"></span>
                 </div>
-                <a href="vascular-surgery.html"
-                  ><h3>VASCULAR SURGERY</h3></a
-                >
+                <a href="vascular-surgery.html"><h3>VASCULAR SURGERY</h3></a>
               </div>
             </div>
             <div class="department-wrap p-4 ftco-animate">
@@ -622,7 +702,9 @@
                 <div class="icon">
                   <span class="flaticon-stethoscope"></span>
                 </div>
-                <a href="surgical-oncology.html"><h3>SURGERICAL ONCOLOGY</h3></a>
+                <a href="surgical-oncology.html"
+                  ><h3>SURGERICAL ONCOLOGY</h3></a
+                >
               </div>
             </div>
             <div class="department-wrap p-4 ftco-animate">
@@ -1284,7 +1366,7 @@
 
     <!-- Contact US -->
 
-     <section class="ftco-section contact-section" id="contact-section">
+    <section class="ftco-section contact-section" id="contact-section">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
@@ -1307,8 +1389,8 @@
               <h3 class="mb-4">Address</h3>
               <p>
                 <a href="https://maps.app.goo.gl/Aj21xmZDjPxV3zjB9"
-                  >5/647,  Avinashi Main Road ,Anaipudur Palangarai post, Tirupur -
-                        641654</a
+                  >5/647, Avinashi Main Road ,Anaipudur Palangarai post, Tirupur
+                  - 641654</a
                 >
               </p>
             </div>
@@ -1409,19 +1491,47 @@
       </div>
     </section>
     <!-- Footer-Section -->
-  <footer class="ftco-footer ftco-section img" style="background-image: url(images/footer-bg.jpg);">
-    	<div class="overlay"></div>
+    <footer
+      class="ftco-footer ftco-section img"
+      style="background-image: url(images/footer-bg.jpg)"
+    >
+      <div class="overlay"></div>
       <div class="container-fluid px-md-5">
         <div class="row mb-5">
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-			  <a href="index.html"><img src="images/CNS logo2.1.png" alt="Logo" class="ftco-heading-2 bb"></a>
-              <p>Far far away, behind the word mountains, far from the countries.</p>
+              <a href="index.html"
+                ><img
+                  src="images/CNS logo2.1.png"
+                  alt="Logo"
+                  class="ftco-heading-2 bb"
+              /></a>
+              <p>
+                Far far away, behind the word mountains, far from the countries.
+              </p>
               <ul class="ftco-footer-social list-unstyled mt-5">
-                <li class="ftco-animate"><a href="https://in.linkedin.com/company/cns-hospitals"><span class="icon-linkedin"></span></a></li>
-                <li class="ftco-animate"><a href="https://www.facebook.com/p/CNS-Hospitals-100075780626133/"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="https://www.instagram.com/cnshospitals?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><span class="icon-instagram"></span></a></li>
-				<li class="ftco-animate"><a href="https://www.youtube.com/@RameshNeuro"><i class="fab fa-youtube"></i></a></li>
+                <li class="ftco-animate">
+                  <a href="https://in.linkedin.com/company/cns-hospitals"
+                    ><span class="icon-linkedin"></span
+                  ></a>
+                </li>
+                <li class="ftco-animate">
+                  <a
+                    href="https://www.facebook.com/p/CNS-Hospitals-100075780626133/"
+                    ><span class="icon-facebook"></span
+                  ></a>
+                </li>
+                <li class="ftco-animate">
+                  <a
+                    href="https://www.instagram.com/cnshospitals?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    ><span class="icon-instagram"></span
+                  ></a>
+                </li>
+                <li class="ftco-animate">
+                  <a href="https://www.youtube.com/@RameshNeuro"
+                    ><i class="fab fa-youtube"></i
+                  ></a>
+                </li>
               </ul>
             </div>
           </div>
@@ -1429,44 +1539,105 @@
             <div class="ftco-footer-widget mb-4 ml-md-4">
               <h2 class="ftco-heading-2">Links</h2>
               <ul class="list-unstyled">
-                <li><a href="index.html"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
-                <li><a href="#about-section"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
-				<li><a href="#facility"><span class="icon-long-arrow-right mr-2"></span>Facility</a></li>
-                <li><a href="#contact-section"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Departments</h2>
-              <ul class="list-unstyled">
-                <li><a href="#department-section"><span class="icon-long-arrow-right mr-2"></span>ANAESTHESIOLOGY</a></li>
-                <li><a href="#department-section"><span class="icon-long-arrow-right mr-2"></span>PLASTIC SURGERY</a></li>
-                <li><a href="#department-section"><span class="icon-long-arrow-right mr-2"></span>UROLOGY Department</a></li>
-				<li><a href="#department-section"><span class="icon-long-arrow-right mr-2"></span>VIEW MORE</a></li>
+                <li>
+                  <a href="index.html"
+                    ><span class="icon-long-arrow-right mr-2"></span>Home</a
+                  >
+                </li>
+                <li>
+                  <a href="#about-section"
+                    ><span class="icon-long-arrow-right mr-2"></span>About</a
+                  >
+                </li>
+                <li>
+                  <a href="#facility"
+                    ><span class="icon-long-arrow-right mr-2"></span>Facility</a
+                  >
+                </li>
+                <li>
+                  <a href="#contact-section"
+                    ><span class="icon-long-arrow-right mr-2"></span>Contact</a
+                  >
+                </li>
               </ul>
             </div>
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
-            	<div class="block-23 mb-3">
-	              <ul>
-	                <li><a href="https://maps.app.goo.gl/Aj21xmZDjPxV3zjB9"><span class="icon icon-map-marker"></span><span class="text">5/647,  Avinashi Main Road ,Anaipudur Palangarai post, Tirupur -
-                        641654</span></a></li>
-	                <li><a href="tel://7530055886"><span class="icon icon-phone"></span><span class="text">+91 75300 55886</span></a></li>
-	                <li><a href="mailto:cnsneurohospital@gmail.com"><span class="icon icon-envelope pr-4"></span><span class="text">cnsneurohospital@gmail.com</span></a></li>
-	              </ul>
-	            </div>
+              <h2 class="ftco-heading-2">Departments</h2>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#department-section"
+                    ><span class="icon-long-arrow-right mr-2"></span
+                    >ANAESTHESIOLOGY</a
+                  >
+                </li>
+                <li>
+                  <a href="#department-section"
+                    ><span class="icon-long-arrow-right mr-2"></span>PLASTIC
+                    SURGERY</a
+                  >
+                </li>
+                <li>
+                  <a href="#department-section"
+                    ><span class="icon-long-arrow-right mr-2"></span>UROLOGY
+                    Department</a
+                  >
+                </li>
+                <li>
+                  <a href="#department-section"
+                    ><span class="icon-long-arrow-right mr-2"></span>VIEW
+                    MORE</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Have a Questions?</h2>
+              <div class="block-23 mb-3">
+                <ul>
+                  <li>
+                    <a href="https://maps.app.goo.gl/Aj21xmZDjPxV3zjB9"
+                      ><span class="icon icon-map-marker"></span
+                      ><span class="text"
+                        >5/647, Avinashi Main Road ,Anaipudur Palangarai post,
+                        Tirupur - 641654</span
+                      ></a
+                    >
+                  </li>
+                  <li>
+                    <a href="tel://7530055886"
+                      ><span class="icon icon-phone"></span
+                      ><span class="text">+91 75300 55886</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="mailto:cnsneurohospital@gmail.com"
+                      ><span class="icon icon-envelope pr-4"></span
+                      ><span class="text">cnsneurohospital@gmail.com</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12 text-center">
-	
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> CNS | Developed By <a href="https://paletteproduction.com/" target="_blank">PALETTE PRODUCTION</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            <p>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              Copyright &copy;
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              CNS | Developed By
+              <a href="https://paletteproduction.com/" target="_blank"
+                >PALETTE PRODUCTION</a
+              >
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
           </div>
         </div>
       </div>
@@ -1516,5 +1687,64 @@
     <script src="js/scrollax.min.js"></script>
 
     <script src="js/main.js"></script>
+
+    <script>
+      const slides = document.querySelectorAll(".hero-slider .slide");
+      let currentSlide = 0;
+
+      setInterval(() => {
+        slides[currentSlide].classList.remove("active");
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add("active");
+      }, 3000); // 3 seconds
+    </script>
+
+    <script>
+      function scrollToAppointment() {
+        document
+          .getElementById("appointment")
+          .scrollIntoView({ behavior: "smooth" });
+      }
+    </script>
+
+    <!-- TIME SLOT SCRIPT -->
+    <script>
+      const sessionSelect = document.getElementById("sessionSelect");
+      const timeSlots = document.getElementById("timeSlots");
+
+      sessionSelect.addEventListener("change", function () {
+        timeSlots.innerHTML = '<option value="">Select Time Slot</option>';
+        timeSlots.disabled = false;
+
+        let startHour, endHour;
+
+        if (this.value === "morning") {
+          startHour = 9; // 9 AM
+          endHour = 12; // 12 PM
+        } else if (this.value === "afternoon") {
+          startHour = 13; // 1 PM
+          endHour = 17; // 5 PM
+        }
+
+        for (let hour = startHour; hour < endHour; hour++) {
+          for (let min = 0; min < 60; min += 15) {
+            // Convert to 12-hour format
+            let displayHour = hour % 12 || 12;
+            let period = hour >= 12 ? "PM" : "AM";
+            let minutes = min.toString().padStart(2, "0");
+
+            let option = document.createElement("option");
+
+            // value can stay 24hr (better for backend)
+            option.value = `${hour.toString().padStart(2, "0")}:${minutes}`;
+
+            // text shown to user (12hr)
+            option.textContent = `${displayHour}:${minutes} ${period}`;
+
+            timeSlots.appendChild(option);
+          }
+        }
+      });
+    </script>
   </body>
 </html>
