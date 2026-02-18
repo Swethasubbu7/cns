@@ -303,29 +303,22 @@
               </div>
             </div>
 
-            <div class="col-lg-5 col-md-12 d-flex mt-md-4">
-              <div
-                class="appointment-wrap p-2 p-md-2 d-flex align-items-center w-100"
-                id="appointment"
-              >
-                <form
-                  action="submit.php"
-                  method="post"
-                  class="appointment-form ftco-animate bg-white p-4 w-100"
-                >
-                  <h3> Free Consultation</h3>
+          <!-- RIGHT APPOINTMENT FORM (UNCHANGED) -->
+        <div class="col-md-5 d-flex">
+          <div class="appointment-wrap p-2 p-md-2 d-flex align-items-center" id="appointment">
+            <form action="submit.php" method="post" class="appointment-form ftco-animate bg-white p-4">
+              <h3>Free Consultation</h3>
 
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      name="name"
-                      class="form-control"
-                      placeholder="Name"
-                      required
-                    />
-                  </div>
+              <div class="form-group">
+                <input type="text" name="name" class="form-control" placeholder="Name" required />
+              </div>
 
-                  <div class="form-group">
+              <div class="form-group">
+                <div class="form-field">
+                  <div class="select-wrap">
+                    <div class="icon">
+                      <span class="ion-ios-arrow-down"></span>
+                    </div>
                     <select name="service" class="form-control" required>
                       <option value="">Select Your Services</option>
                       <option>General Medicine Consultation</option>
@@ -351,73 +344,50 @@
                       <option>Facio Maxillary Surgery</option>
                       <option>Paediatric Surgery</option>
                       <option>Physiotherapy</option>
-                      <option value="Other Services">Other Services</option>
+                      <option>Other Services</option>
                     </select>
                   </div>
-
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      name="phone"
-                      class="form-control"
-                      placeholder="Phone"
-                      required
-                    />
-                  </div>
-
-                  <div class="form-group">
-                    <input
-                      type="date"
-                      name="date"
-                      class="form-control"
-                      required
-                    />
-                  </div>
-
-                  <div class="form-group">
-                    <select class="form-control" required id="sessionSelect">
-                      <option value="">Select Session</option>
-                      <option value="morning">Morning</option>
-                      <option value="afternoon">Afternoon</option>
-                    </select>
-                  </div>
-
-                  <div class="form-group">
-                    <select
-                      name="time"
-                      class="form-control"
-                      required
-                      id="timeSlots"
-                      disabled
-                    >
-                      <option value="">Select Time Slot</option>
-                    </select>
-                  </div>
-
-                  <div class="form-group">
-                    <textarea
-                      name="message"
-                      rows="2"
-                      class="form-control"
-                      placeholder="Symptoms or existing diagnosis details"
-                      required
-                    ></textarea>
-                  </div>
-
-                  <div class="form-group">
-                    <input
-                      type="submit"
-                      value="Request Appointment"
-                      class="btn btn-secondary py-3 px-4 w-100"
-                    />
-                  </div>
-                </form>
+                </div>
               </div>
-            </div>
+
+              <div class="form-group">
+                <input type="text" name="phone" class="form-control" placeholder="Phone" required />
+              </div>
+
+              <div class="form-group">
+                <input type="date" name="date" class="form-control" required />
+              </div>
+
+              <div class="form-group">
+                <select class="form-control" id="sessionSelect" required>
+                  <option value="">Select Session</option>
+                  <option value="morning">Morning</option>
+                  <option value="afternoon">Afternoon</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <select name="time" class="form-control" required id="timeSlots" disabled>
+                  <option value="">Select Time Slot</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <textarea name="message" rows="2" class="form-control" placeholder="Message" required></textarea>
+              </div>
+
+              <div class="form-group">
+                <input type="submit" value="Appointment" class="btn btn-secondary py-3 px-4" />
+              </div>
+
+            </form>
           </div>
         </div>
+
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
     <!-- Content -->
     <section class="content obstetrics" id="facility">
