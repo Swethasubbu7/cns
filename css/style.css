@@ -2361,6 +2361,181 @@ textarea.form-control {
   background-color: rgba(40, 167, 69, 0.9);
   border-radius: 0.25rem;
 }
+/* =====================================
+   GLOBAL FONT SIZE (MEDICAL UI)
+===================================== */
+body {
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* =====================================
+   HEADING STYLES
+===================================== */
+#about-section h2 {
+  font-size: 26px !important;
+  font-weight: 600;
+}
+
+#about-section h3 {
+  font-size: 17px !important;
+  font-weight: 600;
+}
+
+#about-section p {
+  font-size: 13.5px !important;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Center Section Titles */
+.heading-section h2 {
+  text-align: center !important;
+}
+
+/* =====================================
+   REMOVE LEFT & RIGHT WHITE SPACE
+===================================== */
+#about-section {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.ftco-services-2 .container {
+  max-width: 100% !important;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+}
+
+/* =====================================
+   SERVICE ICON SIZE
+===================================== */
+.icon span {
+  font-size: 32px !important;
+}
+
+/* =====================================
+   FORM INPUT STYLE (GLOBAL)
+===================================== */
+.form-control {
+  font-size: 13.5px !important;
+  height: 38px !important;
+  padding: 0.3rem 0.6rem !important;
+}
+
+textarea.form-control {
+  height: 70px !important;
+}
+
+/* =====================================
+   APPOINTMENT FORM CARD DESIGN
+===================================== */
+.appointment-form {
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  padding: 18px !important;
+  background: #fff;
+}
+
+/* Center Form Title */
+.appointment-form h3 {
+  font-size: 18px !important;
+  font-weight: 600;
+  text-align: center;
+  grid-column: span 2;
+}
+
+/* =====================================
+   BUTTON STYLE
+===================================== */
+.appointment-form .btn {
+  font-size: 14px !important;
+  padding: 10px !important;
+  border-radius: 6px;
+  background: #2f89fc !important;
+  border: none;
+  width: 100%;
+}
+
+.appointment-form .btn:hover {
+  background: #1c6ed5 !important;
+}
+
+/* =====================================
+   FORCE 2 COLUMN FORM (NO HTML CHANGE)
+===================================== */
+.appointment-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* Full width fields */
+.appointment-form textarea,
+.appointment-form .btn {
+  grid-column: span 2;
+}
+
+/* Fix select width */
+.select-wrap {
+  width: 100%;
+}
+
+/* =====================================
+   CENTER FORM BOX
+===================================== */
+.appointment-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.appointment-form {
+  width: 100%;
+  max-width: 520px;
+}
+
+/* =====================================
+   REDUCE SECTION HEIGHT
+===================================== */
+.ftco-services-2 {
+  padding-top: 35px !important;
+  padding-bottom: 35px !important;
+}
+
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
+@media (max-width: 768px) {
+
+  .ftco-services-2 .container {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  #about-section h2 {
+    font-size: 22px !important;
+  }
+
+  #about-section h3 {
+    font-size: 15px !important;
+  }
+
+  #about-section p {
+    font-size: 13px !important;
+  }
+
+  /* Mobile form single column */
+  .appointment-form {
+    grid-template-columns: 1fr;
+  }
+
+  .appointment-form textarea,
+  .appointment-form .btn,
+  .appointment-form h3 {
+    grid-column: span 1;
+  }
+}
 
 .was-validated .form-control:valid,
 .form-control.is-valid {
@@ -11589,7 +11764,7 @@ textarea.form-control {
 
 .staff {
   overflow: hidden;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
@@ -11597,7 +11772,7 @@ textarea.form-control {
   transition: all 0.3s ease;
 }
 .staff .img-wrap {
-  height: 220px;
+  height: 200px;
 }
 .staff .img {
   width: 100%;
@@ -11636,25 +11811,29 @@ textarea.form-control {
   -webkit-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
+ 
 }
 .staff .text h3 {
-  font-size: 24px;
-  font-weight: 500;
-  margin-bottom: 0;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  font-size: 15px !important; 
+  font-weight: 700;
+  margin-bottom: 5px;
+  line-height: 1.2;
+  min-height: 40px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  word-wrap: break-word;
 }
 .staff .text .position {
-  text-transform: uppercase;
-  color: #b3b3b3;
-  color: #207dff;
+  font-size: 10px !important;
+  line-height: 1.8;
+  margin-bottom: 10px;
   display: block;
-  letter-spacing: 3px;
-  font-size: 12px;
-  font-weight: 600;
+  min-height: 60px; 
+}
+.btn-primary.btn-sm {
+  padding: 5px 10px;
+  font-size: 11px;
 }
 .staff .text .faded {
   opacity: 1;
@@ -11692,6 +11871,47 @@ textarea.form-control {
 .staff:hover .text h3,
 .staff:focus .text h3 {
   color: #207dff;
+}
+/* Tablet/Mobile Height Adjustment */
+@media (max-width: 991px) {
+  .staff .img-wrap {
+    height: 180px; 
+  }
+}
+
+.staff .img {
+  width: 100%;
+  height: 100%;
+  background-position: top center;
+  background-size: cover;
+  display: block;
+}
+
+.staff .text {
+  padding: 10px 5px;
+}
+
+.staff .text h3 {
+  font-size: 14px !important;
+  font-weight: 700;
+  min-height: 35px;
+  margin-bottom: 5px;
+  line-height: 1.2;
+  word-wrap: break-word;
+}
+
+.staff .text .position {
+  display: block;
+  font-size: 10px !important;
+  color: #207dff;
+  line-height: 1.4;
+  min-height: 50px; 
+  text-transform: uppercase;
+}
+
+.staff .btn-sm {
+  font-size: 10px;
+  padding: 5px 10px;
 }
 
 .ftco-social {
@@ -13312,4 +13532,46 @@ padding-top: 80px;
 #doctor-profile .ftco-social li a:hover {
   background: #000;
   transform: translateY(-5px);
+}
+/* gallery section in home  */
+
+.gallery-section {
+    padding: 30px 0;
+    background: #fff;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-auto-rows: 200px; 
+    gap: 10px; 
+    padding: 10px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border: 4px solid #fff; 
+}
+
+.item-tall {
+    grid-row: span 2; 
+}
+
+.item-wide {
+    grid-column: span 1;
+}
+
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr); /* Mobile-la 2 columns */
+    }
 }
