@@ -378,15 +378,15 @@
               </div>
             </div>
 
-            <div class="col-lg-5 col-md-12 d-flex mt-md-4">
+                    <!-- RIGHT APPOINTMENT FORM -->
+            <div class="col-md-5 d-flex" id="appointment">
               <div
-                class="appointment-wrap p-2 p-md-2 d-flex align-items-center w-100"
-                id="appointment"
+                class="appointment-wrap p-2 p-md-2 d-flex align-items-center"
               >
                 <form
                   action="submit.php"
                   method="post"
-                  class="appointment-form ftco-animate bg-white p-4 w-100"
+                  class="appointment-form ftco-animate bg-white p-4"
                 >
                   <h3>Free Consultation</h3>
 
@@ -401,33 +401,34 @@
                   </div>
 
                   <div class="form-group">
-                    <select name="service" class="form-control" required>
-                      <option value="">Select Your Services</option>
-                      <option>General Medicine Consultation</option>
-                      <option>Diabetes</option>
-                      <option>Neurology Consultation</option>
-                      <option>Neurosurgery Consultation</option>
-                      <option>Cardiology Consultation</option>
-                      <option>Orthopaedics & Spine Care</option>
-                      <option>Obstetrics & Gynaecology</option>
-                      <option>Paediatrics</option>
-                      <option>Critical Care / ICU Consultation</option>
-                      <option>Emergency Services</option>
-                      <option>Radiology</option>
-                      <option>Anaesthesiology</option>
-                      <option>Dermatology (Skin & Hair)</option>
-                      <option>Pulmonology (Lung & Allergy)</option>
-                      <option>Nephrology (Kidney Care)</option>
-                      <option>Urology</option>
-                      <option>ENT (Ear, Nose & Throat)</option>
-                      <option>Psychiatry (Mental Health)</option>
-                      <option>Plastic & Reconstructive Surgery</option>
-                      <option>Surgical Gastroenterology</option>
-                      <option>Facio Maxillary Surgery</option>
-                      <option>Paediatric Surgery</option>
-                      <option selected>Physiotherapy</option>
-                      <option value="Other Services">Other Services</option>
-                    </select>
+                    <div class="form-field">
+                      <div class="select-wrap">
+                        <div class="icon">
+                          <span class="ion-ios-arrow-down"></span>
+                        </div>
+                        <select name="service" class="form-control" required>
+                          <option value="">Select Your Services</option>
+                          <option>General Medicine</option>
+                          <option>Neurology</option>
+                          <option>Neurosurgery</option>
+                          <option>Cardiology</option>
+                          <option>Orthopaedics</option>
+                          <option>Gynaecology</option>
+                          <option>Paediatrics</option>
+                          <option>Critical Care</option>
+                          <option>Emergency</option>
+                          <option>Radiology</option>
+                          <option>Dermatology</option>
+                          <option>Pulmonology</option>
+                          <option>Nephrology</option>
+                          <option>Urology</option>
+                          <option>ENT</option>
+                          <option>Psychiatry</option>
+                          <option>Physiotherapy</option>
+                          <option>Other Services</option>
+                        </select>
+                      </div>
+                    </div>
                   </div>
 
                   <div class="form-group">
@@ -450,7 +451,7 @@
                   </div>
 
                   <div class="form-group">
-                    <select class="form-control" required id="sessionSelect">
+                    <select class="form-control" id="sessionSelect" required>
                       <option value="">Select Session</option>
                       <option value="morning">Morning</option>
                       <option value="afternoon">Afternoon</option>
@@ -474,16 +475,15 @@
                       name="message"
                       rows="2"
                       class="form-control"
-                      placeholder="Please describe your physical condition or injury"
-                      required
+                      placeholder="Message"
                     ></textarea>
                   </div>
 
                   <div class="form-group">
                     <input
                       type="submit"
-                      value="Appointment"
-                      class="btn btn-secondary py-3 px-4 w-100"
+                      value="Book Appointment"
+                      class="btn btn-secondary py-3 px-4"
                     />
                   </div>
                 </form>
