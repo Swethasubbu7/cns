@@ -11590,7 +11590,7 @@ textarea.form-control {
   transition: all 0.3s ease;
 }
 .staff .img-wrap {
-  height: 300px;
+  height: 220px;
 }
 .staff .img {
   width: 100%;
@@ -11602,6 +11602,9 @@ textarea.form-control {
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
   position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
 }
 .staff .img:after {
   position: absolute;
