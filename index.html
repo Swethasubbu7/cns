@@ -189,7 +189,7 @@
       <div class="hero-slider">
         <div
           class="slide active"
-          style="background-image: url(&quot;images/banner.png&quot;)"
+          style="background-image: url(&quot;images/banner1.jpeg&quot;)"
         ></div>
         <div
           class="slide"
@@ -227,6 +227,7 @@
       .hero-wrap {
         position: relative;
         overflow: hidden;
+        min-height: 500px;
       }
 
       .hero-slider {
@@ -243,7 +244,8 @@
         width: 100%;
         height: 100%;
         background-size: cover;
-        background-position: center;
+        background-position: center center;
+        background-repeat: no-repeat;
         opacity: 0;
         transition: opacity 1.2s ease-in-out;
       }
@@ -252,16 +254,61 @@
         opacity: 1;
       }
 
-      .hero-content {
-        position: relative;
-        z-index: 3;
+      /* Responsiveness for Mobile and Tablets */
+      @media (max-width: 991px) {
+        .hero-wrap {
+          height: 70vh !important;
+          min-height: 500px;
+        }
+
+        /* Force the flex container to align items to the top */
+        .slider-text.align-items-center {
+          align-items: flex-start !important;
+          padding-top: 40px;
+        }
+
+        .hero-content {
+          z-index: 5;
+          width: 100%;
+          /* Optional: adds a soft shadow to text to make it pop against any background */
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Styling the text block for better mobile visibility */
+        .ftco-animate .mt-5 {
+          margin-top: 20px !important;
+          /* Light overlay so text is readable */
+          padding: 20px;
+          border-radius: 8px;
+        }
       }
 
-      .overlay-banner {
-        position: absolute;
-        inset: 0;
-        /* background: rgba(0, 0, 0, 0.5);  */
-        z-index: 2;
+      /* Responsiveness for Mobile Devices */
+      @media (max-width: 768px) {
+        .hero-wrap {
+          height: 60vh !important;
+          min-height: 400px;
+        }
+
+        .slider-text h1 {
+          font-size: 18px;
+        }
+      }
+      @media (max-width: 768px) {
+        .hero-slider .slide {
+          background-position: right center !important;
+          background-size: cover;
+        }
+
+        .hero-content {
+          margin-top: 20%;
+          padding: 20px;
+          border-radius: 10px;
+        }
+
+        .hero-wrap {
+          height: 70vh !important;
+        }
       }
     </style>
 
@@ -276,8 +323,10 @@
             <!-- LEFT SERVICES SECTION -->
             <div class="col-md-7 py-5">
               <div class="py-lg-5">
-                <div class="row justify-content-center pb-5">
-                  <div class="col-md-12 heading-section ftco-animate">
+                <div class="row justify-content-center pb-3">
+                  <div
+                    class="col-md-12 heading-section ftco-animate text-center"
+                  >
                     <h2 class="mb-3">Premium Medical Services</h2>
                   </div>
                 </div>
@@ -287,12 +336,12 @@
                   <div class="col-md-6 d-flex align-self-stretch ftco-animate">
                     <div class="media block-6 services d-flex">
                       <div
-                        class="icon justify-content-center align-items-center d-flex"
+                        class="icon icon-about justify-content-center align-items-center d-flex"
                       >
                         <span class="flaticon-ambulance"></span>
                       </div>
-                      <div class="media-body pl-md-4">
-                        <h3 class="heading mb-3">Emergency & Critical Care</h3>
+                      <div class="media-body pl-md-3">
+                        <h3 class="heading mb-2">Emergency & Critical Care</h3>
                         <p>
                           24/7 emergency medical care with advanced facilities
                           and rapid response team.
@@ -305,12 +354,12 @@
                   <div class="col-md-6 d-flex align-self-stretch ftco-animate">
                     <div class="media block-6 services d-flex">
                       <div
-                        class="icon justify-content-center align-items-center d-flex"
+                        class="icon icon-about justify-content-center align-items-center d-flex"
                       >
                         <span class="flaticon-doctor"></span>
                       </div>
-                      <div class="media-body pl-md-4">
-                        <h3 class="heading mb-3">Multi-Specialty Treatments</h3>
+                      <div class="media-body pl-md-3">
+                        <h3 class="heading mb-2">Multi-Specialty Treatments</h3>
                         <p>
                           Expert doctors across medicine, surgery, orthopaedics,
                           neurology, cardiology, and more.
@@ -323,12 +372,12 @@
                   <div class="col-md-6 d-flex align-self-stretch ftco-animate">
                     <div class="media block-6 services d-flex">
                       <div
-                        class="icon justify-content-center align-items-center d-flex"
+                        class="icon icon-about justify-content-center align-items-center d-flex"
                       >
                         <span class="flaticon-stethoscope"></span>
                       </div>
-                      <div class="media-body pl-md-4">
-                        <h3 class="heading mb-3">Advanced Diagnostics</h3>
+                      <div class="media-body pl-md-3">
+                        <h3 class="heading mb-2">Advanced Diagnostics</h3>
                         <p>
                           Modern laboratory, imaging, and diagnostic services
                           for accurate treatment.
@@ -341,12 +390,12 @@
                   <div class="col-md-6 d-flex align-self-stretch ftco-animate">
                     <div class="media block-6 services d-flex">
                       <div
-                        class="icon justify-content-center align-items-center d-flex"
+                        class="icon icon-about justify-content-center align-items-center d-flex"
                       >
                         <span class="flaticon-24-hours"></span>
                       </div>
-                      <div class="media-body pl-md-4">
-                        <h3 class="heading mb-3">24×7 Patient Care</h3>
+                      <div class="media-body pl-md-3">
+                        <h3 class="heading mb-2">24×7 Patient Care</h3>
                         <p>
                           Continuous patient monitoring with compassionate and
                           professional healthcare staff.
@@ -361,95 +410,104 @@
             <!-- RIGHT APPOINTMENT FORM -->
             <div class="col-md-5 d-flex" id="appointment">
               <div
-                class="appointment-wrap p-2 p-md-2 d-flex align-items-center"
+                class="appointment-wrap p-2 p-md-2 d-flex align-items-center w-100"
               >
                 <form
                   action="submit.php"
                   method="post"
-                  class="appointment-form ftco-animate bg-white p-4"
+                  class="appointment-form ftco-animate bg-white p-4 w-100"
                 >
-                  <h3>Free Consultation</h3>
+                  <h3 class="text-center mb-3">Free Consultation</h3>
 
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      name="name"
-                      class="form-control"
-                      placeholder="Name"
-                      required
-                    />
-                  </div>
+                  <!-- ROW 1 -->
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <input
+                        type="text"
+                        name="name"
+                        class="form-control"
+                        placeholder="Name"
+                        required
+                      />
+                    </div>
 
-                  <div class="form-group">
-                    <div class="form-field">
-                      <div class="select-wrap">
-                        <div class="icon">
-                          <span class="ion-ios-arrow-down"></span>
-                        </div>
-                        <select name="service" class="form-control" required>
-                          <option value="">Select Your Services</option>
-                          <option>General Medicine</option>
-                          <option>Neurology</option>
-                          <option>Neurosurgery</option>
-                          <option>Cardiology</option>
-                          <option>Orthopaedics</option>
-                          <option>Gynaecology</option>
-                          <option>Paediatrics</option>
-                          <option>Critical Care</option>
-                          <option>Emergency</option>
-                          <option>Radiology</option>
-                          <option>Dermatology</option>
-                          <option>Pulmonology</option>
-                          <option>Nephrology</option>
-                          <option>Urology</option>
-                          <option>ENT</option>
-                          <option>Psychiatry</option>
-                          <option>Physiotherapy</option>
-                          <option>Other Services</option>
-                        </select>
-                      </div>
+                    <div class="form-group col-md-6">
+                      <select name="service" class="form-control" required>
+                        <option value="">Select Your Services</option>
+                        <option>General Medicine Consultation</option>
+                        <option>Diabetes</option>
+                        <option>Neurology Consultation</option>
+                        <option>Neurosurgery Consultation</option>
+                        <option>Cardiology Consultation</option>
+                        <option>Orthopaedics & Spine Care</option>
+                        <option>Obstetrics & Gynaecology</option>
+                        <option>Paediatrics</option>
+                        <option>Critical Care / ICU Consultation</option>
+                        <option>Emergency Services</option>
+                        <option>Radiology</option>
+                        <option>Anaesthesiology</option>
+                        <option>Dermatology (Skin & Hair)</option>
+                        <option>Pulmonology (Lung & Allergy)</option>
+                        <option>Nephrology (Kidney Care)</option>
+                        <option>Urology</option>
+                        <option>ENT (Ear, Nose & Throat)</option>
+                        <option>Psychiatry (Mental Health)</option>
+                        <option>Plastic & Reconstructive Surgery</option>
+                        <option>Surgical Gastroenterology</option>
+                        <option>Facio Maxillary Surgery</option>
+                        <option>Paediatric Surgery</option>
+                        <option>Physiotherapy</option>
+                        <option>Other Services</option>
+                      </select>
                     </div>
                   </div>
 
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      name="phone"
-                      class="form-control"
-                      placeholder="Phone"
-                      required
-                    />
+                  <!-- ROW 2 -->
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <input
+                        type="text"
+                        name="phone"
+                        class="form-control"
+                        placeholder="Phone"
+                        required
+                      />
+                    </div>
+
+                    <div class="form-group col-md-6">
+                      <input
+                        type="date"
+                        name="date"
+                        class="form-control"
+                        required
+                      />
+                    </div>
                   </div>
 
-                  <div class="form-group">
-                    <input
-                      type="date"
-                      name="date"
-                      class="form-control"
-                      required
-                    />
+                  <!-- ROW 3 -->
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <select class="form-control" id="sessionSelect" required>
+                        <option value="">Select Session</option>
+                        <option value="morning">Morning</option>
+                        <option value="afternoon">Afternoon</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                      <select
+                        name="time"
+                        class="form-control"
+                        id="timeSlots"
+                        disabled
+                        required
+                      >
+                        <option value="">Select Time Slot</option>
+                      </select>
+                    </div>
                   </div>
 
-                  <div class="form-group">
-                    <select class="form-control" id="sessionSelect" required>
-                      <option value="">Select Session</option>
-                      <option value="morning">Morning</option>
-                      <option value="afternoon">Afternoon</option>
-                    </select>
-                  </div>
-
-                  <div class="form-group">
-                    <select
-                      name="time"
-                      class="form-control"
-                      required
-                      id="timeSlots"
-                      disabled
-                    >
-                      <option value="">Select Time Slot</option>
-                    </select>
-                  </div>
-
+                  <!-- Message -->
                   <div class="form-group">
                     <textarea
                       name="message"
@@ -459,11 +517,12 @@
                     ></textarea>
                   </div>
 
+                  <!-- Button -->
                   <div class="form-group">
                     <input
                       type="submit"
                       value="Book Appointment"
-                      class="btn btn-secondary py-3 px-4"
+                      class="btn btn-secondary btn-block py-2"
                     />
                   </div>
                 </form>
@@ -517,7 +576,7 @@
           <div class="facilities-grid">
             <div class="department-wrap p-md-4 ftco-animate">
               <div class="text p-2 text-center">
-                <div class="icon">
+                <div class="icon icon-about">
                   <span class="flaticon-stethoscope"></span>
                 </div>
                 <a href="neurology.html"><h3>NEURO & SPINE SURGERY</h3></a>
@@ -525,7 +584,7 @@
             </div>
             <div class="department-wrap p-md-4 ftco-animate">
               <div class="text p-2 text-center">
-                <div class="icon">
+                <div class="icon icon-about">
                   <span class="flaticon-stethoscope"></span>
                 </div>
                 <a href="orthopedics.html"
@@ -535,7 +594,7 @@
             </div>
             <div class="department-wrap p-md-4 ftco-animate">
               <div class="text p-2 text-center">
-                <div class="icon">
+                <div class="icon icon-about">
                   <span class="flaticon-stethoscope"></span>
                 </div>
                 <a href="cardiology.html"><h3>CARDIOLOGY</h3></a>
@@ -543,7 +602,7 @@
             </div>
             <div class="department-wrap p-md-4 ftco-animate">
               <div class="text p-2 text-center">
-                <div class="icon">
+                <div class="icon icon-about">
                   <span class="flaticon-stethoscope"></span>
                 </div>
                 <a href="plastic-surgery.html"><h3>PLASTIC SURGERY</h3></a>
@@ -551,7 +610,7 @@
             </div>
             <div class="department-wrap p-md-4 ftco-animate">
               <div class="text p-2 text-center">
-                <div class="icon">
+                <div class="icon icon-about">
                   <span class="flaticon-stethoscope"></span>
                 </div>
                 <a href="general-laparoscopic-surgery.html"
@@ -561,7 +620,7 @@
             </div>
             <div class="department-wrap p-md-4 ftco-animate">
               <div class="text p-2 text-center">
-                <div class="icon">
+                <div class="icon icon-about">
                   <span class="flaticon-stethoscope"></span>
                 </div>
                 <a href="obstetrician-and-gynecologis.html"
@@ -571,7 +630,7 @@
             </div>
             <div class="department-wrap p-md-4 ftco-animate">
               <div class="text p-2 text-center">
-                <div class="icon">
+                <div class="icon icon-about">
                   <span class="flaticon-stethoscope"></span>
                 </div>
                 <a href="omfs.html"
@@ -581,7 +640,7 @@
             </div>
             <div class="department-wrap p-md-4 ftco-animate">
               <div class="text p-2 text-center">
-                <div class="icon">
+                <div class="icon icon-about">
                   <span class="flaticon-stethoscope"></span>
                 </div>
                 <a href="pediatrics-and-Neonatology.html"
@@ -591,7 +650,7 @@
             </div>
             <div class="department-wrap p-md-4 ftco-animate">
               <div class="text p-2 text-center">
-                <div class="icon">
+                <div class="icon icon-about">
                   <span class="flaticon-stethoscope"></span>
                 </div>
                 <a href="nephrology.html"><h3>NEPHROLOGY</h3></a>
@@ -599,7 +658,7 @@
             </div>
             <div class="department-wrap p-md-4 ftco-animate">
               <div class="text p-2 text-center">
-                <div class="icon">
+                <div class="icon icon-about">
                   <span class="flaticon-stethoscope"></span>
                 </div>
                 <a href="internalmedicine-and-diabetology.html"
@@ -609,7 +668,7 @@
             </div>
             <div class="department-wrap p-md-4 ftco-animate">
               <div class="text p-2 text-center">
-                <div class="icon">
+                <div class="icon icon-about">
                   <span class="flaticon-stethoscope"></span>
                 </div>
                 <a href="anaesthesiology.html"
@@ -622,7 +681,7 @@
             </div>
             <div class="department-wrap p-md-4 ftco-animate">
               <div class="text p-2 text-center">
-                <div class="icon">
+                <div class="icon icon-about">
                   <span class="flaticon-stethoscope"></span>
                 </div>
                 <a href="EmergencyMedicine.html"><h3>EMERGENCY MEDICINE</h3></a>
@@ -630,7 +689,7 @@
             </div>
             <div class="department-wrap p-md-4 ftco-animate">
               <div class="text p-2 text-center">
-                <div class="icon">
+                <div class="icon icon-about">
                   <span class="flaticon-stethoscope"></span>
                 </div>
                 <a href="psychiatry-team.html"><h3>PSYCHIATRY</h3></a>
@@ -638,7 +697,7 @@
             </div>
             <div class="department-wrap p-md-4 ftco-animate">
               <div class="text p-2 text-center">
-                <div class="icon">
+                <div class="icon icon-about">
                   <span class="flaticon-stethoscope"></span>
                 </div>
                 <a href="pulmonology.html"><h3>PULMONOLOGY</h3></a>
@@ -646,7 +705,7 @@
             </div>
             <div class="department-wrap p-md-4 ftco-animate">
               <div class="text p-2 text-center">
-                <div class="icon">
+                <div class="icon icon-about">
                   <span class="flaticon-stethoscope"></span>
                 </div>
                 <a href="urology.html"><h3>UROLOGY</h3></a>
@@ -654,7 +713,7 @@
             </div>
             <div class="department-wrap p-md-4 ftco-animate">
               <div class="text p-2 text-center">
-                <div class="icon">
+                <div class="icon icon-about">
                   <span class="flaticon-stethoscope"></span>
                 </div>
                 <a href="ent.html"><h3>ENT (Ear, Nose, and Throat)</h3></a>
@@ -662,7 +721,7 @@
             </div>
             <div class="department-wrap p-md-4 ftco-animate">
               <div class="text p-2 text-center">
-                <div class="icon">
+                <div class="icon icon-about">
                   <span class="flaticon-stethoscope"></span>
                 </div>
                 <a href="surgical-gastroenterology.html"
@@ -672,7 +731,7 @@
             </div>
             <div class="department-wrap p-md-4 ftco-animate">
               <div class="text p-2 text-center">
-                <div class="icon">
+                <div class="icon icon-about">
                   <span class="flaticon-stethoscope"></span>
                 </div>
                 <a href="paediatric-surgery.html"
@@ -682,7 +741,7 @@
             </div>
             <div class="department-wrap p-md-4 ftco-animate">
               <div class="text p-2 text-center">
-                <div class="icon">
+                <div class="icon icon-about">
                   <span class="flaticon-stethoscope"></span>
                 </div>
                 <a href="medical-oncologist.html"><h3>MEDICAL ONCOLOGY</h3></a>
@@ -690,7 +749,7 @@
             </div>
             <div class="department-wrap p-md-4 ftco-animate">
               <div class="text p-2 text-center">
-                <div class="icon">
+                <div class="icon icon-about">
                   <span class="flaticon-stethoscope"></span>
                 </div>
                 <a href="vascular-surgery.html"><h3>VASCULAR SURGERY</h3></a>
@@ -698,7 +757,7 @@
             </div>
             <div class="department-wrap p-md-4 ftco-animate">
               <div class="text p-2 text-center">
-                <div class="icon">
+                <div class="icon icon-about">
                   <span class="flaticon-stethoscope"></span>
                 </div>
                 <a href="surgical-oncology.html"
@@ -708,7 +767,7 @@
             </div>
             <div class="department-wrap p-md-4 ftco-animate">
               <div class="text p-2 text-center">
-                <div class="icon">
+                <div class="icon icon-about">
                   <span class="flaticon-stethoscope"></span>
                 </div>
                 <a href="radiology-and-imaging.html"><h3>RADIOLOGY</h3></a>
@@ -716,7 +775,7 @@
             </div>
             <div class="department-wrap p-md-4 ftco-animate">
               <div class="text p-2 text-center">
-                <div class="icon">
+                <div class="icon icon-about">
                   <span class="flaticon-stethoscope"></span>
                 </div>
                 <a href="ophthalmology.html"><h3>OPTHALMOLOGY</h3></a>
@@ -724,7 +783,7 @@
             </div>
             <div class="department-wrap p-md-4 ftco-animate">
               <div class="text p-2 text-center">
-                <div class="icon">
+                <div class="icon icon-about">
                   <span class="flaticon-stethoscope"></span>
                 </div>
                 <a href="dermatology.html"><h3>DERMATOLOGY</h3></a>
@@ -732,7 +791,7 @@
             </div>
             <div class="department-wrap p-md-4 ftco-animate">
               <div class="text p-2 text-center">
-                <div class="icon">
+                <div class="icon icon-about">
                   <span class="flaticon-stethoscope"></span>
                 </div>
                 <a href="physiotherapy.html"
@@ -749,6 +808,46 @@
         color: #fff;
       }
     </style>
+
+    <!-- <style>
+      .staff {
+        display: flex;
+        flex-direction: column;
+        height: 455px; /* 👈 specific height */
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+      }
+
+      /* Image wrapper */
+      .img-wrap {
+        flex: 0 0 55%; /* 👈 image takes 55% height */
+        width: 100%;
+      }
+
+      /* Background image */
+      .img {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+      }
+
+      /* Text area */
+      .text {
+        flex: 1; /* 👈 remaining space */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 15px;
+      }
+
+      /* Button alignment */
+      .faded {
+        margin-top: auto; /* 👈 push button to bottom */
+      }
+    </style> -->
 
     <!-- Doctor-Section -->
     <section id="doctors">

@@ -57,7 +57,6 @@ html {
   scroll-margin-top: 100px;
 }
 
-
 article,
 aside,
 figcaption,
@@ -2362,16 +2361,10 @@ textarea.form-control {
   border-radius: 0.25rem;
 }
 /* =====================================
-   GLOBAL FONT SIZE (MEDICAL UI)
+   GLOBAL FONT SIZE REDUCTION (MEDICAL UI)
 ===================================== */
-body {
-  font-size: 14px;
-  font-family: "Poppins", sans-serif;
-}
 
-/* =====================================
-   HEADING STYLES
-===================================== */
+/* Medical Services Section */
 #about-section h2 {
   font-size: 26px !important;
   font-weight: 600;
@@ -2386,11 +2379,6 @@ body {
   font-size: 13.5px !important;
   line-height: 1.6;
   color: #555;
-}
-
-/* Center Section Titles */
-.heading-section h2 {
-  text-align: center !important;
 }
 
 /* =====================================
@@ -2408,14 +2396,22 @@ body {
 }
 
 /* =====================================
-   SERVICE ICON SIZE
+   SERVICE ICON SIZE REDUCE
 ===================================== */
-.icon span {
+/* .icon span {
   font-size: 32px !important;
-}
+} */ 
+
+
+
+
+.icon-about span {
+  font-size:40px !important;
+} 
+
 
 /* =====================================
-   FORM INPUT STYLE (GLOBAL)
+   FORM CONTROL SIZE REDUCE (Bootstrap Override)
 ===================================== */
 .form-control {
   font-size: 13.5px !important;
@@ -2428,71 +2424,30 @@ textarea.form-control {
 }
 
 /* =====================================
-   APPOINTMENT FORM CARD DESIGN
+   APPOINTMENT FORM DESIGN
 ===================================== */
 .appointment-form {
   border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   padding: 18px !important;
-  background: #fff;
 }
 
-/* Center Form Title */
 .appointment-form h3 {
   font-size: 18px !important;
   font-weight: 600;
-  text-align: center;
-  grid-column: span 2;
 }
 
-/* =====================================
-   BUTTON STYLE
-===================================== */
+/* Button */
 .appointment-form .btn {
   font-size: 14px !important;
   padding: 10px !important;
   border-radius: 6px;
-  background: #2f89fc !important;
+  background: #2f89fc;
   border: none;
-  width: 100%;
 }
 
 .appointment-form .btn:hover {
-  background: #1c6ed5 !important;
-}
-
-/* =====================================
-   FORCE 2 COLUMN FORM (NO HTML CHANGE)
-===================================== */
-.appointment-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-/* Full width fields */
-.appointment-form textarea,
-.appointment-form .btn {
-  grid-column: span 2;
-}
-
-/* Fix select width */
-.select-wrap {
-  width: 100%;
-}
-
-/* =====================================
-   CENTER FORM BOX
-===================================== */
-.appointment-wrap {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.appointment-form {
-  width: 100%;
-  max-width: 520px;
+  background: #1c6ed5;
 }
 
 /* =====================================
@@ -2507,7 +2462,6 @@ textarea.form-control {
    MOBILE RESPONSIVE
 ===================================== */
 @media (max-width: 768px) {
-
   .ftco-services-2 .container {
     padding-left: 12px !important;
     padding-right: 12px !important;
@@ -2524,16 +2478,20 @@ textarea.form-control {
   #about-section p {
     font-size: 13px !important;
   }
+}
+/* Center Medical Services Heading */
+#about-section .heading-section h2 {
+  text-align: center;
+}
 
-  /* Mobile form single column */
-  .appointment-form {
-    grid-template-columns: 1fr;
-  }
-
-  .appointment-form textarea,
-  .appointment-form .btn,
-  .appointment-form h3 {
-    grid-column: span 1;
+/* Center Free Consultation Heading */
+.appointment-form h3 {
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .form-row .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 }
 
@@ -11156,8 +11114,14 @@ h5,
 }
 
 .facility-item h3 {
-  font-size: 1.2em;
+  font-size: 18px;
   margin: 0 0 10px;
+}
+
+@media (max-width: 768px) {
+  .facility-item h3 {
+    font-size: 13px;
+  }
 }
 .facility-item h3:hover {
   color: #fff;
@@ -11738,9 +11702,14 @@ textarea.form-control {
 }
 .department-wrap .text h3 {
   font-size: 18px;
-}
-.department-wrap .text h3 {
   color: #000000;
+}
+
+@media (max-width: 768px) {
+  .department-wrap .text h3 {
+    font-size: 13px;
+    color: #000000;
+  }
 }
 .department-wrap .text h3:hover {
   color: #fff;
@@ -11811,14 +11780,13 @@ textarea.form-control {
   -webkit-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
- 
 }
 .staff .text h3 {
-  font-size: 15px !important; 
+  font-size: 18px !important;
   font-weight: 700;
   margin-bottom: 5px;
   line-height: 1.2;
-  min-height: 40px; 
+  min-height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11829,7 +11797,7 @@ textarea.form-control {
   line-height: 1.8;
   margin-bottom: 10px;
   display: block;
-  min-height: 60px; 
+  min-height: 60px;
 }
 .btn-primary.btn-sm {
   padding: 5px 10px;
@@ -11875,7 +11843,7 @@ textarea.form-control {
 /* Tablet/Mobile Height Adjustment */
 @media (max-width: 991px) {
   .staff .img-wrap {
-    height: 180px; 
+    height: 180px;
   }
 }
 
@@ -11892,7 +11860,7 @@ textarea.form-control {
 }
 
 .staff .text h3 {
-  font-size: 14px !important;
+  font-size: 18px !important;
   font-weight: 700;
   min-height: 35px;
   margin-bottom: 5px;
@@ -11902,17 +11870,19 @@ textarea.form-control {
 
 .staff .text .position {
   display: block;
-  font-size: 10px !important;
+  font-size: 13px !important;
   color: #207dff;
   line-height: 1.4;
-  min-height: 50px; 
+  min-height: 50px;
   text-transform: uppercase;
 }
 
 .staff .btn-sm {
-  font-size: 10px;
+  font-size: 15px;
   padding: 5px 10px;
 }
+
+
 
 .ftco-social {
   padding: 0;
@@ -11924,7 +11894,7 @@ textarea.form-control {
 }
 
 .ftco-section {
-padding-top: 80px;
+  padding-top: 80px;
   padding-left: 25px;
   padding-right: 25px;
   padding-bottom: 0px;
@@ -13536,42 +13506,42 @@ padding-top: 80px;
 /* gallery section in home  */
 
 .gallery-section {
-    padding: 30px 0;
-    background: #fff;
+  padding: 30px 0;
+  background: #fff;
 }
 
 .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    grid-auto-rows: 200px; 
-    gap: 10px; 
-    padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 200px;
+  gap: 10px;
+  padding: 10px;
 }
 
 .gallery-item {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    border: 4px solid #fff; 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border: 4px solid #fff;
 }
 
 .item-tall {
-    grid-row: span 2; 
+  grid-row: span 2;
 }
 
 .item-wide {
-    grid-column: span 1;
+  grid-column: span 1;
 }
-
 
 @media (max-width: 768px) {
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr); /* Mobile-la 2 columns */
-    }
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* Mobile-la 2 columns */
+  }
 }
+
