@@ -710,14 +710,12 @@
           </div>
         </div>
 
-        <div class="row no-gutters block-9">
+       <div class="row no-gutters block-9">
           <div class="col-md-6 order-md-last d-flex">
-            <form
-              action="Opinion Form.php"
-              method="post"
-              class="bg-light p-5 contact-form w-100"
-            >
+            <!-- FORM START -->
+            <form id="contactForm" class="bg-light p-5 contact-form w-100">
               <h2 class="mb-4">Your Opinion</h2>
+
               <div class="form-group">
                 <input
                   type="text"
@@ -727,6 +725,7 @@
                   required
                 />
               </div>
+
               <div class="form-group">
                 <input
                   type="email"
@@ -736,6 +735,7 @@
                   required
                 />
               </div>
+
               <div class="form-group">
                 <input
                   type="text"
@@ -745,6 +745,7 @@
                   required
                 />
               </div>
+
               <div class="form-group">
                 <textarea
                   name="message"
@@ -755,6 +756,7 @@
                   required
                 ></textarea>
               </div>
+
               <div class="form-group">
                 <input
                   type="submit"
@@ -763,6 +765,10 @@
                 />
               </div>
             </form>
+            <!-- FORM END -->
+
+            <!-- SNACKBAR -->
+            <div id="snackbar"></div>
           </div>
 
           <div class="col-md-6 d-flex"id="map">
@@ -770,7 +776,8 @@
               class="map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4274.115591665469!2d77.29241001592247!3d11.17630909596777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba9052515d751e5%3A0xa2184d6dce4d7e4b!2sCNS%20Super%20Speciality%20Hospital!5e1!3m2!1sen!2sin!4v1718688139982!5m2!1sen!2sin"
               referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
+            >
+            </iframe>
           </div>
         </div>
       </div>
