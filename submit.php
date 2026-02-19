@@ -1,35 +1,47 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Collect form data
-    $name = htmlspecialchars($_POST['name']);
-    $service = htmlspecialchars($_POST['service']);
-    $phone = htmlspecialchars($_POST['phone']);
-    $date = htmlspecialchars($_POST['date']);
-    $time = htmlspecialchars($_POST['time']);
-    $message = htmlspecialchars($_POST['message']);
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-    // Email details
-    $to = "paletteproductions22@gmail.com"; // Replace with your email address
-    $subject = "New Appointment Request";
-    
-    $body = "New appointment request:\n\n";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $to = "cnsneurohospital@gmail.com";
+
+    // Form Data
+    $name    = $_POST['name'] ?? '';
+    $service = $_POST['service'] ?? '';
+    $phone   = $_POST['phone'] ?? '';
+    $date    = $_POST['date'] ?? '';
+    $session = $_POST['session'] ?? '';
+    $time    = $_POST['time'] ?? '';
+    $message = $_POST['message'] ?? '';
+
+    // Subject
+    $subject = "New Appointment Request - CNS Hospital";
+
+    // Body
+    $body  = "New Appointment Request\n\n";
     $body .= "Name: $name\n";
     $body .= "Service: $service\n";
     $body .= "Phone: $phone\n";
     $body .= "Date: $date\n";
+    $body .= "Session: $session\n";
     $body .= "Time: $time\n";
     $body .= "Message: $message\n";
 
-    // Additional headers
-    $headers = "From: no-reply@example.com"; // Replace with a valid from address
+    // Headers
+    $headers  = "From: CNS Website <no-reply@cnsneurohospital.com>\r\n";
+    $headers .= "Reply-To: paletteproductiondevelopers@gmail.com\r\n";
+    $headers .= "MIME-Version: 1.0\r\n";
+    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
-    // Send email
+    // Send Mail
     if (mail($to, $subject, $body, $headers)) {
-        echo "Thank you for your request. We will get back to you soon.";
+        echo "✅ Appointment Sent Successfully";
     } else {
-        echo "Sorry, something went wrong. Please try again.";
+        echo "❌ Mail Failed";
     }
+
 } else {
-    echo "Invalid request.";
+    echo "Invalid Request";
 }
 ?>
