@@ -4,7 +4,7 @@ ini_set('display_errors', 1);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $to = "cnsneurohospital@gmail.com";
+    $to = "paletteproductiondevelopers@gmail.com";
 
     // Form Data
     $name    = $_POST['name'] ?? '';

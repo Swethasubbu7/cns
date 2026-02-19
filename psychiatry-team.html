@@ -216,180 +216,236 @@
     <!-- About and Appointment -->
 
     <section
-  class="ftco-counter img ftco-section ftco-no-pt ftco-no-pb"
-  id="about-section"
->
-  <div class="ftco-section ftco-no-pt ftco-no-pb ftco-services-2 bg-light">
-    <div class="container">
-      <div class="row d-flex">
+      class="ftco-counter img ftco-section ftco-no-pt ftco-no-pb"
+      id="about-section"
+    >
+      <div class="ftco-section ftco-no-pt ftco-no-pb ftco-services-2 bg-light">
+        <div class="container">
+          <div class="row d-flex">
+            <!-- SERVICES COLUMN -->
+            <div class="col-lg-7 col-md-12 py-5">
+              <div class="py-lg-5">
+                <div class="row justify-content-center pb-5">
+                  <div class="col-md-12 heading-section ftco-animate">
+                    <h2 class="mb-3">Premium Medical Services</h2>
+                  </div>
+                </div>
 
-        <!-- SERVICES COLUMN -->
-        <div class="col-lg-7 col-md-12 py-5">
-          <div class="py-lg-5">
-            <div class="row justify-content-center pb-5">
-              <div class="col-md-12 heading-section ftco-animate">
-                <h2 class="mb-3">Premium Medical Services</h2>
+                <div class="row">
+                  <!-- Service 1 -->
+                  <div class="col-md-6 d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services d-flex">
+                      <div
+                        class="icon d-flex justify-content-center align-items-center"
+                      >
+                        <span class="flaticon-ambulance"></span>
+                      </div>
+                      <div class="media-body pl-md-4">
+                        <h3 class="heading mb-3">
+                          Emergency Mental Health Care
+                        </h3>
+                        <p>
+                          Immediate psychiatric support for crisis situations,
+                          acute stress, panic attacks, and emergency mental
+                          health conditions.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Service 2 -->
+                  <div class="col-md-6 d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services d-flex">
+                      <div
+                        class="icon d-flex justify-content-center align-items-center"
+                      >
+                        <span class="flaticon-doctor"></span>
+                      </div>
+                      <div class="media-body pl-md-4">
+                        <h3 class="heading mb-3">
+                          Psychiatric Consultation & Therapy
+                        </h3>
+                        <p>
+                          Expert diagnosis and treatment for depression,
+                          anxiety, bipolar disorder, schizophrenia, and
+                          stress-related disorders.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Service 3 -->
+                  <div class="col-md-6 d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services d-flex">
+                      <div
+                        class="icon d-flex justify-content-center align-items-center"
+                      >
+                        <span class="flaticon-stethoscope"></span>
+                      </div>
+                      <div class="media-body pl-md-4">
+                        <h3 class="heading mb-3">
+                          Behavioral & Cognitive Therapy
+                        </h3>
+                        <p>
+                          Personalized counseling and therapy programs including
+                          CBT, psychotherapy, and stress management sessions.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Service 4 -->
+                  <div class="col-md-6 d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 services d-flex">
+                      <div
+                        class="icon d-flex justify-content-center align-items-center"
+                      >
+                        <span class="flaticon-24-hours"></span>
+                      </div>
+                      <div class="media-body pl-md-4">
+                        <h3 class="heading mb-3">24×7 Mental Health Support</h3>
+                        <p>
+                          Continuous mental health monitoring and support for
+                          patients with chronic psychiatric conditions and
+                          recovery programs.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="row">
+            <!-- RIGHT APPOINTMENT FORM -->
+            <div class="col-md-5 d-flex" id="appointment">
+              <div
+                class="appointment-wrap p-2 p-md-2 d-flex align-items-center w-100"
+              >
+                <form
+                  id="appointmentForm"
+                  class="appointment-form ftco-animate bg-white p-4 w-100"
+                >
+                  <h3 class="text-center mb-3">Free Consultation</h3>
 
-              <!-- Service 1 -->
-              <div class="col-md-6 d-flex align-self-stretch ftco-animate">
-                <div class="media block-6 services d-flex">
-                  <div class="icon d-flex justify-content-center align-items-center">
-                    <span class="flaticon-ambulance"></span>
+                  <!-- ROW 1 -->
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <input
+                        type="text"
+                        name="name"
+                        class="form-control"
+                        placeholder="Name"
+                        required
+                      />
+                    </div>
+
+                    <div class="form-group col-md-6">
+                      <select name="service" class="form-control" required>
+                        <option value="">Select Your Services</option>
+                        <option>General Medicine Consultation</option>
+                        <option>Diabetes</option>
+                        <option>Neurology Consultation</option>
+                        <option>Neurosurgery Consultation</option>
+                        <option>Cardiology Consultation</option>
+                        <option>Orthopaedics & Spine Care</option>
+                        <option>Obstetrics & Gynaecology</option>
+                        <option>Paediatrics</option>
+                        <option>Critical Care / ICU Consultation</option>
+                        <option>Emergency Services</option>
+                        <option>Radiology</option>
+                        <option>Anaesthesiology</option>
+                        <option>Dermatology (Skin & Hair)</option>
+                        <option>Pulmonology (Lung & Allergy)</option>
+                        <option>Nephrology (Kidney Care)</option>
+                        <option>Urology</option>
+                        <option>ENT (Ear, Nose & Throat)</option>
+                        <option>Psychiatry (Mental Health)</option>
+                        <option>Plastic & Reconstructive Surgery</option>
+                        <option>Surgical Gastroenterology</option>
+                        <option>Facio Maxillary Surgery</option>
+                        <option>Paediatric Surgery</option>
+                        <option>Physiotherapy</option>
+                        <option>Other Services</option>
+                      </select>
+                    </div>
                   </div>
-                  <div class="media-body pl-md-4">
-                    <h3 class="heading mb-3">Emergency Mental Health Care</h3>
-                    <p>
-                      Immediate psychiatric support for crisis situations, acute stress, panic attacks, and emergency mental health conditions.
-                    </p>
+
+                  <!-- ROW 2 -->
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <input
+                        type="text"
+                        name="phone"
+                        class="form-control"
+                        placeholder="Phone"
+                        required
+                      />
+                    </div>
+
+                    <div class="form-group col-md-6">
+                      <input
+                        type="date"
+                        name="date"
+                        class="form-control"
+                        required
+                      />
+                    </div>
                   </div>
-                </div>
+
+                  <!-- ROW 3 -->
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <select
+                        name="session"
+                        class="form-control"
+                        id="sessionSelect"
+                        required
+                      >
+                        <option value="">Select Session</option>
+                        <option value="morning">Morning</option>
+                        <option value="afternoon">Afternoon</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                      <select
+                        name="time"
+                        class="form-control"
+                        id="timeSlots"
+                        disabled
+                        required
+                      >
+                        <option value="">Select Time Slot</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <!-- Message -->
+                  <div class="form-group">
+                    <textarea
+                      name="message"
+                      rows="2"
+                      class="form-control"
+                      placeholder="Message"
+                    ></textarea>
+                  </div>
+
+                  <!-- Button -->
+                  <div class="form-group">
+                    <input
+                      type="submit"
+                      value="Book Appointment"
+                      class="btn btn-secondary btn-block py-2"
+                    />
+                  </div>
+                </form>
+                <div id="appointmentSnackbar"></div>
               </div>
-
-              <!-- Service 2 -->
-              <div class="col-md-6 d-flex align-self-stretch ftco-animate">
-                <div class="media block-6 services d-flex">
-                  <div class="icon d-flex justify-content-center align-items-center">
-                    <span class="flaticon-doctor"></span>
-                  </div>
-                  <div class="media-body pl-md-4">
-                    <h3 class="heading mb-3">Psychiatric Consultation & Therapy</h3>
-                    <p>
-                      Expert diagnosis and treatment for depression, anxiety, bipolar disorder, schizophrenia, and stress-related disorders.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Service 3 -->
-              <div class="col-md-6 d-flex align-self-stretch ftco-animate">
-                <div class="media block-6 services d-flex">
-                  <div class="icon d-flex justify-content-center align-items-center">
-                    <span class="flaticon-stethoscope"></span>
-                  </div>
-                  <div class="media-body pl-md-4">
-                    <h3 class="heading mb-3">Behavioral & Cognitive Therapy</h3>
-                    <p>
-                      Personalized counseling and therapy programs including CBT, psychotherapy, and stress management sessions.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Service 4 -->
-              <div class="col-md-6 d-flex align-self-stretch ftco-animate">
-                <div class="media block-6 services d-flex">
-                  <div class="icon d-flex justify-content-center align-items-center">
-                    <span class="flaticon-24-hours"></span>
-                  </div>
-                  <div class="media-body pl-md-4">
-                    <h3 class="heading mb-3">24×7 Mental Health Support</h3>
-                    <p>
-                      Continuous mental health monitoring and support for patients with chronic psychiatric conditions and recovery programs.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
             </div>
-          </div>
-        </div>
-
-               <!-- RIGHT APPOINTMENT FORM -->
-        <div class="col-md-5 d-flex" id="appointment">
-          <div class="appointment-wrap p-2 p-md-2 d-flex align-items-center w-100">
-            <form
-              action="submit.php"
-              method="post"
-              class="appointment-form ftco-animate bg-white p-4 w-100"
-            >
-              <h3 class="text-center mb-3">Free Consultation</h3>
-
-              <!-- ROW 1 -->
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Name" required />
-                </div>
-
-                <div class="form-group col-md-6">
-                  <select name="service" class="form-control" required>
-                    <option value="">Select Your Services</option>
-                    <option>General Medicine Consultation</option>
-                      <option>Diabetes</option>
-                      <option>Neurology Consultation</option>
-                      <option>Neurosurgery Consultation</option>
-                      <option>Cardiology Consultation</option>
-                      <option>Orthopaedics & Spine Care</option>
-                      <option>Obstetrics & Gynaecology</option>
-                      <option>Paediatrics</option>
-                      <option>Critical Care / ICU Consultation</option>
-                      <option>Emergency Services</option>
-                      <option>Radiology</option>
-                      <option>Anaesthesiology</option>
-                      <option>Dermatology (Skin & Hair)</option>
-                      <option>Pulmonology (Lung & Allergy)</option>
-                      <option>Nephrology (Kidney Care)</option>
-                      <option>Urology</option>
-                      <option>ENT (Ear, Nose & Throat)</option>
-                      <option>Psychiatry (Mental Health)</option>
-                      <option>Plastic & Reconstructive Surgery</option>
-                      <option>Surgical Gastroenterology</option>
-                      <option>Facio Maxillary Surgery</option>
-                      <option>Paediatric Surgery</option>
-                      <option>Physiotherapy</option>
-                    <option>Other Services</option>
-                  </select>
-                </div>
-              </div>
-
-              <!-- ROW 2 -->
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <input type="text" name="phone" class="form-control" placeholder="Phone" required />
-                </div>
-
-                <div class="form-group col-md-6">
-                  <input type="date" name="date" class="form-control" required />
-                </div>
-              </div>
-
-              <!-- ROW 3 -->
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <select class="form-control" id="sessionSelect" required>
-                    <option value="">Select Session</option>
-                    <option value="morning">Morning</option>
-                    <option value="afternoon">Afternoon</option>
-                  </select>
-                </div>
-
-                <div class="form-group col-md-6">
-                  <select name="time" class="form-control" id="timeSlots" disabled required>
-                    <option value="">Select Time Slot</option>
-                  </select>
-                </div>
-              </div>
-
-              <!-- Message -->
-              <div class="form-group">
-                <textarea name="message" rows="2" class="form-control" placeholder="Message"></textarea>
-              </div>
-
-              <!-- Button -->
-              <div class="form-group">
-                <input type="submit" value="Book Appointment" class="btn btn-secondary btn-block py-2" />
-              </div>
-            </form>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
+    </section>
 
     <!-- Content -->
     <section class="content psychiatry" id="facility">
@@ -571,12 +627,7 @@
             </p>
 
             <div class="mb-0">
-              <a
-                href="#map"
-                class="btn-parallax-location"
-              >
-                Get Location
-              </a>
+              <a href="#map" class="btn-parallax-location"> Get Location </a>
             </div>
           </div>
         </div>
@@ -585,7 +636,7 @@
 
     <!-- Contact US -->
 
-  <section class="ftco-section contact-section" id="contact-section">
+    <section class="ftco-section contact-section" id="contact-section">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
@@ -608,8 +659,8 @@
               <h3 class="mb-4">Address</h3>
               <p>
                 <a href="https://maps.app.goo.gl/Aj21xmZDjPxV3zjB9"
-                  >5/647,  Avinashi Main Road , Anaipudur Palangarai post , Tirupur -
-                        641654</a
+                  >5/647, Avinashi Main Road , Anaipudur Palangarai post ,
+                  Tirupur - 641654</a
                 >
               </p>
             </div>
@@ -705,7 +756,7 @@
             <div id="snackbar"></div>
           </div>
 
-          <div class="col-md-6 d-flex"id="map">
+          <div class="col-md-6 d-flex" id="map">
             <iframe
               class="map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4274.115591665469!2d77.29241001592247!3d11.17630909596777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba9052515d751e5%3A0xa2184d6dce4d7e4b!2sCNS%20Super%20Speciality%20Hospital!5e1!3m2!1sen!2sin!4v1718688139982!5m2!1sen!2sin"
@@ -717,7 +768,7 @@
       </div>
     </section>
 
-     <!-- Footer-Section -->
+    <!-- Footer-Section -->
 
     <footer
       class="ftco-footer ftco-section img"
@@ -784,7 +835,8 @@
                 </li>
                 <li>
                   <a href="index.html#departments"
-                    ><span class="icon-long-arrow-right mr-2"></span>Departments</a
+                    ><span class="icon-long-arrow-right mr-2"></span
+                    >Departments</a
                   >
                 </li>
                 <li>
@@ -961,6 +1013,74 @@
 
             timeSlots.appendChild(option);
           }
+        }
+      });
+    </script>
+    <!--contact  -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("contactForm")
+          .addEventListener("submit", function (e) {
+            e.preventDefault(); // STOP redirect
+
+            let formData = new FormData(this);
+
+            fetch("Opinion-Form.php", {
+              method: "POST",
+              body: formData,
+            })
+              .then((res) => res.text())
+              .then((data) => {
+                showSnackbar(data);
+                document.getElementById("contactForm").reset();
+              })
+              .catch(() => {
+                showSnackbar("❌ Something went wrong");
+              });
+          });
+
+        function showSnackbar(message) {
+          let snackbar = document.getElementById("snackbar");
+          snackbar.innerHTML = message;
+          snackbar.className = "show";
+
+          setTimeout(() => {
+            snackbar.className = "";
+          }, 3000);
+        }
+      });
+    </script>
+
+    <!--Appointment  -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("appointmentForm")
+          .addEventListener("submit", function (e) {
+            e.preventDefault(); // STOP redirect
+
+            let formData = new FormData(this);
+
+            fetch("submit.php", {
+              method: "POST",
+              body: formData,
+            })
+              .then((res) => res.text())
+              .then((data) => {
+                showSnackbar(data);
+                document.getElementById("appointmentForm").reset();
+              });
+          });
+
+        function showSnackbar(message) {
+          let snackbar = document.getElementById("appointmentSnackbar");
+          snackbar.innerHTML = message;
+          snackbar.className = "show";
+
+          setTimeout(function () {
+            snackbar.className = "";
+          }, 3000);
         }
       });
     </script>
