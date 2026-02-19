@@ -394,33 +394,26 @@
               </div>
             </div>
 
-            <!-- APPOINTMENT FORM -->
-            <div class="col-lg-5 col-md-12 d-flex mt-md-4">
-              <div
-                class="appointment-wrap p-2 p-md-2 d-flex align-items-center w-100"
-                id="appointment"
-              >
-                <form
-                  action="submit.php"
-                  method="post"
-                  class="appointment-form ftco-animate bg-white p-4 w-100"
-                >
-                  <h3>Free Consultation</h3>
+                   <!-- RIGHT APPOINTMENT FORM -->
+        <div class="col-md-5 d-flex" id="appointment">
+          <div class="appointment-wrap p-2 p-md-2 d-flex align-items-center w-100">
+            <form
+              action="submit.php"
+              method="post"
+              class="appointment-form ftco-animate bg-white p-4 w-100"
+            >
+              <h3 class="text-center mb-3">Free Consultation</h3>
 
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      name="name"
-                      class="form-control"
-                      placeholder="Name"
-                      required
-                    />
-                  </div>
+              <!-- ROW 1 -->
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Name" required />
+                </div>
 
-                  <div class="form-group">
-                    <select name="service" class="form-control" required>
-                      <option value="">Select Your Services</option>
-                      <option>General Medicine Consultation</option>
+                <div class="form-group col-md-6">
+                  <select name="service" class="form-control" required>
+                    <option value="">Select Your Services</option>
+                    <option>General Medicine Consultation</option>
                       <option>Diabetes</option>
                       <option>Neurology Consultation</option>
                       <option>Neurosurgery Consultation</option>
@@ -443,74 +436,55 @@
                       <option>Facio Maxillary Surgery</option>
                       <option>Paediatric Surgery</option>
                       <option>Physiotherapy</option>
-                      <option value="Other Services">Other Services</option>
-                    </select>
-                  </div>
-
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      name="phone"
-                      class="form-control"
-                      placeholder="Phone"
-                      required
-                    />
-                  </div>
-
-                  <div class="form-group">
-                    <input
-                      type="date"
-                      name="date"
-                      class="form-control"
-                      required
-                    />
-                  </div>
-
-                  <div class="form-group">
-                    <select class="form-control" required id="sessionSelect">
-                      <option value="">Select Session</option>
-                      <option value="morning">Morning</option>
-                      <option value="afternoon">Afternoon</option>
-                    </select>
-                  </div>
-
-                  <!-- TIME SLOTS -->
-                  <div class="form-group">
-                    <select
-                      name="time"
-                      class="form-control"
-                      required
-                      id="timeSlots"
-                      disabled
-                    >
-                      <option value="">Select Time Slot</option>
-                    </select>
-                  </div>
-
-                  <div class="form-group">
-                    <textarea
-                      name="message"
-                      rows="2"
-                      class="form-control"
-                      placeholder="Message"
-                      required
-                    ></textarea>
-                  </div>
-
-                  <div class="form-group">
-                    <input
-                      type="submit"
-                      value="Appointment"
-                      class="btn btn-secondary py-3 px-4 w-100"
-                    />
-                  </div>
-                </form>
+                    <option>Other Services</option>
+                  </select>
+                </div>
               </div>
-            </div>
+
+              <!-- ROW 2 -->
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input type="text" name="phone" class="form-control" placeholder="Phone" required />
+                </div>
+
+                <div class="form-group col-md-6">
+                  <input type="date" name="date" class="form-control" required />
+                </div>
+              </div>
+
+              <!-- ROW 3 -->
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <select class="form-control" id="sessionSelect" required>
+                    <option value="">Select Session</option>
+                    <option value="morning">Morning</option>
+                    <option value="afternoon">Afternoon</option>
+                  </select>
+                </div>
+
+                <div class="form-group col-md-6">
+                  <select name="time" class="form-control" id="timeSlots" disabled required>
+                    <option value="">Select Time Slot</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Message -->
+              <div class="form-group">
+                <textarea name="message" rows="2" class="form-control" placeholder="Message"></textarea>
+              </div>
+
+              <!-- Button -->
+              <div class="form-group">
+                <input type="submit" value="Book Appointment" class="btn btn-secondary btn-block py-2" />
+              </div>
+            </form>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
     <!-- content -->
     <section class="content obstetrics" id="facility">
       <div class="container">
@@ -665,7 +639,7 @@
 
             <div class="mb-0">
               <a
-                href="https://maps.app.goo.gl/YourLinkHere"
+                href="#map"
                 class="btn-parallax-location"
               >
                 Get Location
@@ -792,7 +766,7 @@
             </form>
           </div>
 
-          <div class="col-md-6 d-flex">
+          <div class="col-md-6 d-flex"id="map">
             <iframe
               class="map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4274.115591665469!2d77.29241001592247!3d11.17630909596777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba9052515d751e5%3A0xa2184d6dce4d7e4b!2sCNS%20Super%20Speciality%20Hospital!5e1!3m2!1sen!2sin!4v1718688139982!5m2!1sen!2sin"
@@ -802,21 +776,49 @@
         </div>
       </div>
     </section>
-    <!-- Footer-Section -->
+   <!-- Footer-Section -->
 
-      <footer class="ftco-footer ftco-section img" style="background-image: url(images/footer-bg.jpg);">
-    	<div class="overlay"></div>
+    <footer
+      class="ftco-footer ftco-section img"
+      style="background-image: url(images/footer-bg.jpg)"
+    >
+      <div class="overlay"></div>
       <div class="container-fluid px-md-5">
         <div class="row mb-5">
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-			  <a href="index.html"><img src="images/CNS logo2.1.png" alt="Logo" class="ftco-heading-2 bb"></a>
-              <p>Far far away, behind the word mountains, far from the countries.</p>
+              <a href="index.html"
+                ><img
+                  src="images/CNS logo2.1.png"
+                  alt="Logo"
+                  class="ftco-heading-2 bb"
+              /></a>
+              <p>
+                Far far away, behind the word mountains, far from the countries.
+              </p>
               <ul class="ftco-footer-social list-unstyled mt-5">
-                <li class="ftco-animate"><a href="https://in.linkedin.com/company/cns-hospitals"><span class="icon-linkedin"></span></a></li>
-                <li class="ftco-animate"><a href="https://www.facebook.com/p/CNS-Hospitals-100075780626133/"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="https://www.instagram.com/cnshospitals?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><span class="icon-instagram"></span></a></li>
-				<li class="ftco-animate"><a href="https://www.youtube.com/@RameshNeuro"><i class="fab fa-youtube"></i></a></li>
+                <li class="ftco-animate">
+                  <a href="https://in.linkedin.com/company/cns-hospitals"
+                    ><span class="icon-linkedin"></span
+                  ></a>
+                </li>
+                <li class="ftco-animate">
+                  <a
+                    href="https://www.facebook.com/p/CNS-Hospitals-100075780626133/"
+                    ><span class="icon-facebook"></span
+                  ></a>
+                </li>
+                <li class="ftco-animate">
+                  <a
+                    href="https://www.instagram.com/cnshospitals?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    ><span class="icon-instagram"></span
+                  ></a>
+                </li>
+                <li class="ftco-animate">
+                  <a href="https://www.youtube.com/@RameshNeuro"
+                    ><i class="fab fa-youtube"></i
+                  ></a>
+                </li>
               </ul>
             </div>
           </div>
@@ -824,44 +826,115 @@
             <div class="ftco-footer-widget mb-4 ml-md-4">
               <h2 class="ftco-heading-2">Links</h2>
               <ul class="list-unstyled">
-                <li><a href="index.html"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
-                <li><a href="#about-section"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
-				<li><a href="#facility"><span class="icon-long-arrow-right mr-2"></span>Facility</a></li>
-                <li><a href="#contact-section"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Departments</h2>
-              <ul class="list-unstyled">
-                <li><a href="#department-section"><span class="icon-long-arrow-right mr-2"></span>ANAESTHESIOLOGY</a></li>
-                <li><a href="#department-section"><span class="icon-long-arrow-right mr-2"></span>PLASTIC SURGERY</a></li>
-                <li><a href="#department-section"><span class="icon-long-arrow-right mr-2"></span>UROLOGY Department</a></li>
-				<li><a href="#department-section"><span class="icon-long-arrow-right mr-2"></span>VIEW MORE</a></li>
+                <li>
+                  <a href="index.html"
+                    ><span class="icon-long-arrow-right mr-2"></span>Home</a
+                  >
+                </li>
+                <li>
+                  <a href="#about-section"
+                    ><span class="icon-long-arrow-right mr-2"></span>About</a
+                  >
+                </li>
+                <li>
+                  <a href="index.html#doctors"
+                    ><span class="icon-long-arrow-right mr-2"></span>Doctors</a
+                  >
+                </li>
+                <li>
+                  <a href="index.html#departments"
+                    ><span class="icon-long-arrow-right mr-2"></span>Departments</a
+                  >
+                </li>
+                <li>
+                  <a href="#facility"
+                    ><span class="icon-long-arrow-right mr-2"></span>Facility</a
+                  >
+                </li>
+                <li>
+                  <a href="#contact-section"
+                    ><span class="icon-long-arrow-right mr-2"></span>Contact</a
+                  >
+                </li>
               </ul>
             </div>
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
-            	<div class="block-23 mb-3">
-	              <ul>
-	                <li><a href="https://maps.app.goo.gl/Aj21xmZDjPxV3zjB9"><span class="icon icon-map-marker"></span><span class="text">5/647,  Avinashi Main Road , Anaipudur Palangarai post , Tirupur -
-                        641654</span></a></li>
-	                <li><a href="tel://7530055886"><span class="icon icon-phone"></span><span class="text">+91 75300 55886</span></a></li>
-	                <li><a href="mailto:cnsneurohospital@gmail.com"><span class="icon icon-envelope pr-4"></span><span class="text">cnsneurohospital@gmail.com</span></a></li>
-	              </ul>
-	            </div>
+              <h2 class="ftco-heading-2">Departments</h2>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#department-section"
+                    ><span class="icon-long-arrow-right mr-2"></span
+                    >ANAESTHESIOLOGY</a
+                  >
+                </li>
+                <li>
+                  <a href="#department-section"
+                    ><span class="icon-long-arrow-right mr-2"></span>PLASTIC
+                    SURGERY</a
+                  >
+                </li>
+                <li>
+                  <a href="#department-section"
+                    ><span class="icon-long-arrow-right mr-2"></span>UROLOGY
+                    Department</a
+                  >
+                </li>
+                <li>
+                  <a href="#department-section"
+                    ><span class="icon-long-arrow-right mr-2"></span>VIEW
+                    MORE</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Have a Questions?</h2>
+              <div class="block-23 mb-3">
+                <ul>
+                  <li>
+                    <a href="https://maps.app.goo.gl/Aj21xmZDjPxV3zjB9"
+                      ><span class="icon icon-map-marker"></span
+                      ><span class="text"
+                        >5/647, Avinashi Main Road , Anaipudur Palangarai post,
+                        Tirupur - 641654</span
+                      ></a
+                    >
+                  </li>
+                  <li>
+                    <a href="tel://7530055886"
+                      ><span class="icon icon-phone"></span
+                      ><span class="text">+91 75300 55886</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="mailto:cnsneurohospital@gmail.com"
+                      ><span class="icon icon-envelope pr-4"></span
+                      ><span class="text">cnsneurohospital@gmail.com</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12 text-center">
-	
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> CNS | Developed By <a href="https://paletteproduction.com/" target="_blank">PALETTE PRODUCTION</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            <p>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              Copyright &copy;
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              CNS | Developed By
+              <a href="https://paletteproduction.com/" target="_blank"
+                >PALETTE PRODUCTION</a
+              >
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
           </div>
         </div>
       </div>

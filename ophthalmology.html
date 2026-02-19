@@ -311,33 +311,26 @@
               </div>
             </div>
 
-            <!-- APPOINTMENT FORM -->
-            <div class="col-lg-5 col-md-12 d-flex mt-md-4">
-              <div
-                class="appointment-wrap p-2 p-md-2 d-flex align-items-center w-100"
-                id="appointment"
-              >
-                <form
-                  action="submit.php"
-                  method="post"
-                  class="appointment-form ftco-animate bg-white p-4 w-100"
-                >
-                  <h3>Free Consultation</h3>
+                   <!-- RIGHT APPOINTMENT FORM -->
+        <div class="col-md-5 d-flex" id="appointment">
+          <div class="appointment-wrap p-2 p-md-2 d-flex align-items-center w-100">
+            <form
+              action="submit.php"
+              method="post"
+              class="appointment-form ftco-animate bg-white p-4 w-100"
+            >
+              <h3 class="text-center mb-3">Free Consultation</h3>
 
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      name="name"
-                      class="form-control"
-                      placeholder="Name"
-                      required
-                    />
-                  </div>
+              <!-- ROW 1 -->
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Name" required />
+                </div>
 
-                  <div class="form-group">
-                    <select name="service" class="form-control" required>
-                      <option value="">Select Your Services</option>
-                      <option>General Medicine Consultation</option>
+                <div class="form-group col-md-6">
+                  <select name="service" class="form-control" required>
+                    <option value="">Select Your Services</option>
+                    <option>General Medicine Consultation</option>
                       <option>Diabetes</option>
                       <option>Neurology Consultation</option>
                       <option>Neurosurgery Consultation</option>
@@ -360,75 +353,55 @@
                       <option>Facio Maxillary Surgery</option>
                       <option>Paediatric Surgery</option>
                       <option>Physiotherapy</option>
-                      <option value="Other Services">Other Services</option>
-                    </select>
-                  </div>
-
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      name="phone"
-                      class="form-control"
-                      placeholder="Phone"
-                      required
-                    />
-                  </div>
-
-                  <div class="form-group">
-                    <input
-                      type="date"
-                      name="date"
-                      class="form-control"
-                      required
-                    />
-                  </div>
-
-                  <div class="form-group">
-                    <select class="form-control" required id="sessionSelect">
-                      <option value="">Select Session</option>
-                      <option value="morning">Morning</option>
-                      <option value="afternoon">Afternoon</option>
-                    </select>
-                  </div>
-
-                  <!-- TIME SLOTS -->
-                  <div class="form-group">
-                    <select
-                      name="time"
-                      class="form-control"
-                      required
-                      id="timeSlots"
-                      disabled
-                    >
-                      <option value="">Select Time Slot</option>
-                    </select>
-                  </div>
-
-                  <div class="form-group">
-                    <textarea
-                      name="message"
-                      rows="2"
-                      class="form-control"
-                      placeholder="Message"
-                      required
-                    ></textarea>
-                  </div>
-
-                  <div class="form-group">
-                    <input
-                      type="submit"
-                      value="Appointment"
-                      class="btn btn-secondary py-3 px-4 w-100"
-                    />
-                  </div>
-                </form>
+                    <option>Other Services</option>
+                  </select>
+                </div>
               </div>
-            </div>
+
+              <!-- ROW 2 -->
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input type="text" name="phone" class="form-control" placeholder="Phone" required />
+                </div>
+
+                <div class="form-group col-md-6">
+                  <input type="date" name="date" class="form-control" required />
+                </div>
+              </div>
+
+              <!-- ROW 3 -->
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <select class="form-control" id="sessionSelect" required>
+                    <option value="">Select Session</option>
+                    <option value="morning">Morning</option>
+                    <option value="afternoon">Afternoon</option>
+                  </select>
+                </div>
+
+                <div class="form-group col-md-6">
+                  <select name="time" class="form-control" id="timeSlots" disabled required>
+                    <option value="">Select Time Slot</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Message -->
+              <div class="form-group">
+                <textarea name="message" rows="2" class="form-control" placeholder="Message"></textarea>
+              </div>
+
+              <!-- Button -->
+              <div class="form-group">
+                <input type="submit" value="Book Appointment" class="btn btn-secondary btn-block py-2" />
+              </div>
+            </form>
           </div>
         </div>
       </div>
-    </section>
-
+    </div>
+  </div>
+</section>
     <!-- Content -->
     <section class="content obstetrics" id="facility">
       <div class="container">
@@ -582,7 +555,7 @@
 
             <div class="mb-0">
               <a
-                href="https://maps.app.goo.gl/YourLinkHere"
+                href="#map"
                 class="btn-parallax-location"
               >
                 Get Location
@@ -709,7 +682,7 @@
             </form>
           </div>
 
-          <div class="col-md-6 d-flex">
+          <div class="col-md-6 d-flex"id="map">
             <iframe
               class="map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4274.115591665469!2d77.29241001592247!3d11.17630909596777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba9052515d751e5%3A0xa2184d6dce4d7e4b!2sCNS%20Super%20Speciality%20Hospital!5e1!3m2!1sen!2sin!4v1718688139982!5m2!1sen!2sin"
@@ -778,6 +751,16 @@
                 <li>
                   <a href="#about-section"
                     ><span class="icon-long-arrow-right mr-2"></span>About</a
+                  >
+                </li>
+                <li>
+                  <a href="index.html#doctors"
+                    ><span class="icon-long-arrow-right mr-2"></span>Doctors</a
+                  >
+                </li>
+                <li>
+                  <a href="index.html#departments"
+                    ><span class="icon-long-arrow-right mr-2"></span>Departments</a
                   >
                 </li>
                 <li>
