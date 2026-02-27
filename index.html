@@ -868,10 +868,10 @@
                 ></div>
               </div>
               <div class="text text-center">
-                <h3>Dr. S. RAMESH</h3>
+                <h3>Dr.S.RAMESH</h3>
                 <span class="position"
                   >MBBS., MS., M.Ch(Neuro), Founder & Senior Consultant for
-                  Neurology & Neurosurgery</span
+                  NEURO & SPINE SURGEON</span
                 >
                 <div class="faded">
                   <a href="#appointment" class="btn btn-primary btn-sm"
@@ -1045,9 +1045,9 @@
                 ></div>
               </div>
               <div class="text text-center">
-                <h3>Dr. S. Vijaykumar</h3>
+                <h3>Dr. S. Vijayakumar</h3>
                 <span class="position"
-                  >MBBS.,MRCP,DMEPC Diabetologist & General Physician</span
+                  >MBBS.,MRCOP,DMEPOC Diabetologist & General Physician</span
                 >
                 <div class="faded">
                   <a href="#appointment" class="btn btn-primary btn-sm"
@@ -1104,63 +1104,58 @@
     </section>
     <!-- Our Journey -->
 
-    <section
-      class="ftco-facts img ftco-counter"
-      style="background-image: url(images/exp.jpg)"
-    >
-      <div class="overlay"></div>
-
+    <section class="facts-section py-5">
       <div class="container">
-        <div class="row d-flex align-items-center">
-          <!-- LEFT CONTENT -->
-          <div class="col-md-5 heading-section heading-section-white">
-            <span class="subheading">our journey</span>
-            <h2 class="mb-3">Over 15,000+ patients trust us</h2>
-            <p class="mb-0">
-              <a href="#appointment" class="btn btn-secondary px-4 py-3">
-                Make an appointment
-              </a>
-            </p>
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="premium-card">
+              <div class="card-content">
+                <span class="label">Years of Experience</span>
+                <div class="number-wrapper">
+                  <strong class="number" data-number="20">20</strong>
+                  <span class="plus">+</span>
+                </div>
+              </div>
+              <div class="card-border-bottom"></div>
+            </div>
           </div>
 
-          <!-- RIGHT COUNTERS -->
-          <div class="col-md-7">
-            <div class="row pt-md-3 pt-2">
-              <div class="col-md-6 d-flex justify-content-center counter-wrap">
-                <div class="block-18">
-                  <div class="text">
-                    <strong class="number" data-number="20">0</strong>
-                    <span>Years of Experience</span>
-                  </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="premium-card">
+              <div class="card-content">
+                <span class="label">Happy Patients</span>
+                <div class="number-wrapper">
+                  <strong class="number" data-number="15000">15000</strong>
+                  <span class="plus">+</span>
                 </div>
               </div>
+              <div class="card-border-bottom"></div>
+            </div>
+          </div>
 
-              <div class="col-md-6 d-flex justify-content-center counter-wrap">
-                <div class="block-18">
-                  <div class="text">
-                    <strong class="number" data-number="15000">0</strong>
-                    <span>Happy Patients</span>
-                  </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="premium-card">
+              <div class="card-content">
+                <span class="label">Doctors</span>
+                <div class="number-wrapper">
+                  <strong class="number" data-number="54">54</strong>
+                   <span class="plus">+</span>
                 </div>
               </div>
+              <div class="card-border-bottom"></div>
+            </div>
+          </div>
 
-              <div class="col-md-6 d-flex justify-content-center counter-wrap">
-                <div class="block-18">
-                  <div class="text">
-                    <strong class="number" data-number="54">0</strong>
-                    <span>Doctors</span>
-                  </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="premium-card">
+              <div class="card-content">
+                <span class="label">Staff Members</span>
+                <div class="number-wrapper">
+                  <strong class="number" data-number="200">200</strong>
+                   <span class="plus">+</span>
                 </div>
               </div>
-
-              <div class="col-md-6 d-flex justify-content-center counter-wrap">
-                <div class="block-18">
-                  <div class="text">
-                    <strong class="number" data-number="200">0</strong>
-                    <span>Staff Members</span>
-                  </div>
-                </div>
-              </div>
+              <div class="card-border-bottom"></div>
             </div>
           </div>
         </div>
@@ -1168,28 +1163,98 @@
     </section>
 
     <style>
-      .ftco-facts {
-        position: relative;
-        padding: 50px 0; /* MAIN height control */
-        background-size: cover;
-        background-position: center;
+      /* Base Section Background */
+      .facts-section {
+        background-color: #fdfdfd;
+        padding: 100px 0;
       }
 
-      @media (max-width: 767px) {
-        .ftco-facts {
-          padding: 40px 0; /* smaller on mobile */
+      /* --- PREMIUM CARD DESIGN --- */
+      .premium-card {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 35px 25px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 10px 40px rgba(0, 45, 114, 0.05); /* Soft Blue Shadow */
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        border: 1px solid rgba(0, 0, 0, 0.03);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      /* Card Hover Effect */
+      .premium-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 50px rgba(0, 45, 114, 0.12);
+        border-color: rgba(36, 125, 251, 0.2);
+      }
+
+      /* Label Styling */
+      .premium-card .label {
+        display: block;
+        color: #6c757d;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        margin-bottom: 15px;
+      }
+
+      /* Number Styling */
+      .premium-card .number-wrapper {
+        display: flex;
+        align-items: baseline;
+        gap: 2px;
+      }
+
+      .premium-card .number {
+        display: block;
+        color: #002d72; /* Deep Navy Blue */
+        font-size: 46px;
+        font-weight: 800;
+        line-height: 1;
+      }
+
+      .premium-card .plus {
+        color: #247dfb; /* Bright accent blue */
+        font-size: 28px;
+        font-weight: 700;
+      }
+
+      /* Animated Bottom Border on Hover */
+      .card-border-bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #8db2e6, #247dfb);
+        transition: width 0.4s ease;
+      }
+
+      .premium-card:hover .card-border-bottom {
+        width: 100%;
+      }
+
+      /* Desktop layout: 4 in a row */
+      @media (min-width: 992px) {
+        .col-lg-3 {
+          flex: 0 0 25%;
+          max-width: 25%;
         }
       }
 
-      .ftco-facts .overlay {
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(#8db2e6, #247dfb);
-      }
-
-      .ftco-facts .container {
-        position: relative;
-        z-index: 2;
+      /* Mobile: Center text */
+      @media (max-width: 767px) {
+        .premium-card {
+          text-align: center;
+        }
+        .number-wrapper {
+          justify-content: center;
+        }
       }
     </style>
     <!-- Facilit-Section -->
@@ -1302,35 +1367,35 @@
 
         <div class="gallery-grid">
           <div class="gallery-item">
-            <img src="images/OIP.jpg" alt="CNS 1" />
+            <img src="images/DENTAL.jpg" alt="CNS 1" />
           </div>
 
           <div class="gallery-item item-tall">
-            <img src="images/carymedical.webp" alt="CNS Tall" />
+            <img src="images/MRI.jpg" alt="CNS Tall" />
           </div>
 
           <div class="gallery-item">
-            <img src="images/OIP.jpg" alt="CNS 2" />
+            <img src="images/neuro.jpg" alt="CNS 2" />
           </div>
 
           <div class="gallery-item">
-            <img src="images/carymedical.webp" alt="CNS 3" />
+            <img src="images/ECG.jpg" alt="CNS 3" />
           </div>
 
           <div class="gallery-item">
-            <img src="images/OIP.jpg" alt="CNS 4" />
+            <img src="images/mc.jpg" alt="CNS 4" />
           </div>
 
           <div class="gallery-item">
-            <img src="images/OIP.jpg" alt="CNS 5" />
+            <img src="images/beds.jpg" alt="CNS 5" />
           </div>
 
           <div class="gallery-item">
-            <img src="images/carymedical.webp" alt="CNS 6" />
+            <img src="images/machine.jpeg" alt="CNS 6" />
           </div>
 
           <div class="gallery-item">
-            <img src="images/OIP.jpg" alt="CNS 7" />
+            <img src="images/navi.jpeg" alt="CNS 7" />
           </div>
         </div>
       </div>
