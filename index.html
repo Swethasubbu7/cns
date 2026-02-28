@@ -197,6 +197,11 @@
         ></div>
       </div>
 
+      <!-- ✅ Next Slide Button (Place HERE) -->
+      <button class="next-slide-btn" onclick="manualNextSlide()">
+        &#10095;
+      </button>
+
       <div class="container hero-content">
         <div
           class="row no-gutters slider-text js-fullheight align-items-center"
@@ -309,6 +314,28 @@
         .hero-wrap {
           height: 70vh !important;
         }
+      }
+
+      /* Next Slide Arrow Button */
+      .next-slide-btn {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        background: rgba(0, 45, 114, 0.7);
+        color: #fff;
+        border: none;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        font-size: 22px;
+        cursor: pointer;
+        transition: 0.3s ease;
+      }
+
+      .next-slide-btn:hover {
+        background: #207dff;
       }
     </style>
 
@@ -537,6 +564,190 @@
         </div>
       </div>
     </section>
+
+    <!-- Our Journey -->
+
+    <section class="facts-section py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="premium-card">
+              <div class="card-content">
+                <span class="label">Years of Experience</span>
+                <div class="number-wrapper">
+                  <strong class="number" data-number="20">20</strong>
+                  <span class="plus">+</span>
+                </div>
+              </div>
+              <div class="card-border-bottom"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="premium-card">
+              <div class="card-content">
+                <span class="label">Happy Patients</span>
+                <div class="number-wrapper">
+                  <strong class="number" data-number="15000">15000</strong>
+                  <span class="plus">+</span>
+                </div>
+              </div>
+              <div class="card-border-bottom"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="premium-card">
+              <div class="card-content">
+                <span class="label">Doctors</span>
+                <div class="number-wrapper">
+                  <strong class="number" data-number="54">54</strong>
+                  <span class="plus">+</span>
+                </div>
+              </div>
+              <div class="card-border-bottom"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="premium-card">
+              <div class="card-content">
+                <span class="label">Staff Members</span>
+                <div class="number-wrapper">
+                  <strong class="number" data-number="200">200</strong>
+                  <span class="plus">+</span>
+                </div>
+              </div>
+              <div class="card-border-bottom"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      /* ===============================
+   JOURNEY / FACTS SECTION
+================================= */
+
+      .facts-section {
+        background: linear-gradient(180deg, #f9fbff 0%, #ffffff 100%);
+        padding: 100px 0;
+      }
+
+      /* ===============================
+   PREMIUM CARD DESIGN
+================================= */
+
+      .premium-card {
+        background: #ffffff;
+        border-radius: 18px;
+        padding: 50px 25px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 15px 45px rgba(0, 45, 114, 0.06);
+        transition: all 0.4s ease;
+        border: 1px solid rgba(0, 45, 114, 0.05);
+        height: 100%;
+
+        /* PERFECT CENTER ALIGNMENT */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      /* Hover Effect */
+      .premium-card:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 25px 60px rgba(0, 45, 114, 0.12);
+        border-color: rgba(36, 125, 251, 0.25);
+      }
+
+      /* Content Wrapper */
+      .card-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* ===============================
+   LABEL STYLE
+================================= */
+
+      .premium-card .label {
+        color: #6c757d;
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 20px;
+      }
+
+      /* ===============================
+   NUMBER + PLUS STYLE
+================================= */
+
+      .premium-card .number-wrapper {
+        display: flex;
+        align-items: center; /* 🔥 Vertical center fix */
+        justify-content: center; /* Horizontal center */
+        gap: 6px;
+      }
+
+      .premium-card .number {
+        color: #002d72;
+        font-size: 48px;
+        font-weight: 800;
+        line-height: 1;
+      }
+
+      .premium-card .plus {
+        color: #247dfb;
+        font-size: 38px; /* Adjusted for visual balance */
+        font-weight: 700;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+      }
+
+      /* ===============================
+   BOTTOM ANIMATED BORDER
+================================= */
+
+      .card-border-bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #8db2e6, #247dfb);
+        transition: width 0.4s ease;
+      }
+
+      .premium-card:hover .card-border-bottom {
+        width: 100%;
+      }
+
+      /* ===============================
+   RESPONSIVE
+================================= */
+
+      @media (max-width: 767px) {
+        .premium-card {
+          padding: 35px 20px;
+        }
+
+        .premium-card .number {
+          font-size: 40px;
+        }
+
+        .premium-card .plus {
+          font-size: 32px;
+        }
+      }
+    </style>
 
     <!-- Image-Section -->
 
@@ -851,7 +1062,7 @@
 
     <!-- Doctor-Section -->
     <section id="doctors">
-      <div class="container-fluid px-4">
+      <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-8 text-center heading-section">
             <h2 class="mb-4">Our Best Doctors</h2>
@@ -859,13 +1070,19 @@
         </div>
 
         <div class="row doctor-row">
-          <div class="col-6 col-md-4 col-lg-2 doctor-col">
+          <div class="doctor-col">
             <div class="staff">
               <div class="img-wrap">
-                <div
-                  class="img"
-                  style="background-image: url(images/dr.ramesh.png)"
-                ></div>
+                <img
+                  src="images/dr.ramesh.png"
+                  alt="Dr Ramesh"
+                  style="
+                    width: 100%;
+                    height: 180px;
+                    object-fit: cover;
+                    object-position: top;
+                  "
+                />
               </div>
               <div class="text text-center">
                 <h3>Dr.S.RAMESH</h3>
@@ -882,7 +1099,7 @@
             </div>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-2 doctor-col">
+          <div class="doctor-col">
             <div class="staff">
               <div class="img-wrap">
                 <div
@@ -904,7 +1121,7 @@
             </div>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-2 doctor-col">
+          <div class="doctor-col">
             <div class="staff">
               <div class="img-wrap">
                 <div
@@ -926,7 +1143,7 @@
             </div>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-2 doctor-col">
+          <div class="doctor-col">
             <div class="staff">
               <div class="img-wrap">
                 <div
@@ -948,7 +1165,7 @@
             </div>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-2 doctor-col">
+          <div class="doctor-col">
             <div class="staff">
               <div class="img-wrap">
                 <div
@@ -970,7 +1187,7 @@
             </div>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-2 doctor-col">
+          <div class="doctor-col">
             <div class="staff">
               <div class="img-wrap">
                 <div
@@ -992,7 +1209,7 @@
             </div>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-2 doctor-col">
+          <div class="doctor-col">
             <div class="staff">
               <div class="img-wrap">
                 <div
@@ -1014,7 +1231,7 @@
             </div>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-2 doctor-col">
+          <div class="doctor-col">
             <div class="staff">
               <div class="img-wrap">
                 <div
@@ -1036,7 +1253,7 @@
             </div>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-2 doctor-col">
+          <div class="doctor-col">
             <div class="staff">
               <div class="img-wrap">
                 <div
@@ -1058,7 +1275,7 @@
             </div>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-2 doctor-col">
+          <div class="doctor-col">
             <div class="staff">
               <div class="img-wrap">
                 <div
@@ -1078,7 +1295,7 @@
             </div>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-2 doctor-col">
+          <div class="doctor-col">
             <div class="staff">
               <div class="img-wrap">
                 <div
@@ -1102,161 +1319,100 @@
         </div>
       </div>
     </section>
-    <!-- Our Journey -->
 
-    <section class="facts-section py-5">
+    <!-- Managing Director Section -->
+    <section
+      style="
+        margin-top: 30px;
+        padding: 40px 0;
+        background: linear-gradient(180deg, #f8fbff, #ffffff);
+      "
+    >
       <div class="container">
-        <div class="row g-4">
-          <div class="col-lg-3 col-md-6">
-            <div class="premium-card">
-              <div class="card-content">
-                <span class="label">Years of Experience</span>
-                <div class="number-wrapper">
-                  <strong class="number" data-number="20">20</strong>
-                  <span class="plus">+</span>
-                </div>
-              </div>
-              <div class="card-border-bottom"></div>
-            </div>
+        <div class="row align-items-center">
+          <!-- Left Side - Image -->
+          <div class="col-md-4 text-center" style="margin-bottom: 15px">
+            <img
+              src="images/sudha-mam.JPG"
+              alt="Shudha R V - Managing Director"
+              style="
+                width: 100%;
+                max-width: 260px;
+                border-radius: 16px;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+              "
+            />
           </div>
 
-          <div class="col-lg-3 col-md-6">
-            <div class="premium-card">
-              <div class="card-content">
-                <span class="label">Happy Patients</span>
-                <div class="number-wrapper">
-                  <strong class="number" data-number="15000">15000</strong>
-                  <span class="plus">+</span>
-                </div>
-              </div>
-              <div class="card-border-bottom"></div>
-            </div>
-          </div>
+          <!-- Right Side - Content -->
+          <div class="col-md-8">
+            <h3
+              style="
+                font-size: 22px;
+                font-weight: 700;
+                color: #002d72;
+                margin-bottom: 6px;
+              "
+            >
+              Our Managing Director
+            </h3>
 
-          <div class="col-lg-3 col-md-6">
-            <div class="premium-card">
-              <div class="card-content">
-                <span class="label">Doctors</span>
-                <div class="number-wrapper">
-                  <strong class="number" data-number="54">54</strong>
-                   <span class="plus">+</span>
-                </div>
-              </div>
-              <div class="card-border-bottom"></div>
-            </div>
-          </div>
+            <h4
+              style="
+                font-size: 18px;
+                font-weight: 700;
+                color: #207dff;
+                margin-bottom: 6px;
+              "
+            >
+              Shudha R V
+            </h4>
 
-          <div class="col-lg-3 col-md-6">
-            <div class="premium-card">
-              <div class="card-content">
-                <span class="label">Staff Members</span>
-                <div class="number-wrapper">
-                  <strong class="number" data-number="200">200</strong>
-                   <span class="plus">+</span>
-                </div>
-              </div>
-              <div class="card-border-bottom"></div>
-            </div>
+            <p
+              style="
+                font-size: 14px;
+                font-weight: 600;
+                color: #444;
+                margin-bottom: 12px;
+              "
+            >
+              M.Tech
+            </p>
+
+            <p
+              style="
+                font-size: 14px;
+                line-height: 1.8;
+                color: #555;
+                margin-bottom: 12px;
+              "
+            >
+              Shudha R V serves as the Managing Director of our hospital,
+              bringing strong leadership, strategic vision, and administrative
+              excellence to the organization. With her technical and managerial
+              expertise, she ensures the hospital operates efficiently while
+              maintaining the highest standards of healthcare quality.
+            </p>
+
+            <p
+              style="
+                font-size: 14px;
+                line-height: 1.8;
+                color: #555;
+                margin-bottom: 12px;
+              "
+            >
+              She is actively involved in planning, policy implementation, staff
+              coordination, infrastructure development, and continuous
+              improvement of patient services. Her focus on innovation,
+              transparency, and ethical management has strengthened the
+              hospital’s reputation for reliability and compassionate care.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <style>
-      /* Base Section Background */
-      .facts-section {
-        background-color: #fdfdfd;
-        padding: 100px 0;
-      }
-
-      /* --- PREMIUM CARD DESIGN --- */
-      .premium-card {
-        background: #ffffff;
-        border-radius: 16px;
-        padding: 35px 25px;
-        position: relative;
-        overflow: hidden;
-        box-shadow: 0 10px 40px rgba(0, 45, 114, 0.05); /* Soft Blue Shadow */
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        border: 1px solid rgba(0, 0, 0, 0.03);
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-
-      /* Card Hover Effect */
-      .premium-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 20px 50px rgba(0, 45, 114, 0.12);
-        border-color: rgba(36, 125, 251, 0.2);
-      }
-
-      /* Label Styling */
-      .premium-card .label {
-        display: block;
-        color: #6c757d;
-        font-size: 14px;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1.2px;
-        margin-bottom: 15px;
-      }
-
-      /* Number Styling */
-      .premium-card .number-wrapper {
-        display: flex;
-        align-items: baseline;
-        gap: 2px;
-      }
-
-      .premium-card .number {
-        display: block;
-        color: #002d72; /* Deep Navy Blue */
-        font-size: 46px;
-        font-weight: 800;
-        line-height: 1;
-      }
-
-      .premium-card .plus {
-        color: #247dfb; /* Bright accent blue */
-        font-size: 28px;
-        font-weight: 700;
-      }
-
-      /* Animated Bottom Border on Hover */
-      .card-border-bottom {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0;
-        height: 4px;
-        background: linear-gradient(90deg, #8db2e6, #247dfb);
-        transition: width 0.4s ease;
-      }
-
-      .premium-card:hover .card-border-bottom {
-        width: 100%;
-      }
-
-      /* Desktop layout: 4 in a row */
-      @media (min-width: 992px) {
-        .col-lg-3 {
-          flex: 0 0 25%;
-          max-width: 25%;
-        }
-      }
-
-      /* Mobile: Center text */
-      @media (max-width: 767px) {
-        .premium-card {
-          text-align: center;
-        }
-        .number-wrapper {
-          justify-content: center;
-        }
-      }
-    </style>
     <!-- Facilit-Section -->
 
     <section
@@ -2070,6 +2226,32 @@
             snackbar.className = "";
           }, 3000);
         }
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let currentSlide = 0;
+        const slides = document.querySelectorAll(".hero-slider .slide");
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+          slides.forEach((slide) => slide.classList.remove("active"));
+          slides[index].classList.add("active");
+        }
+
+        function nextSlide() {
+          currentSlide = (currentSlide + 1) % totalSlides;
+          showSlide(currentSlide);
+        }
+
+        // Make button work
+        window.manualNextSlide = function () {
+          nextSlide();
+        };
+
+        // Auto slide every 5 seconds
+        setInterval(nextSlide, 3000);
       });
     </script>
   </body>
