@@ -4,7 +4,7 @@ ini_set('display_errors', 1);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $to = "paletteproductiondevelopers@gmail.com";
+    $to = "cnsneurohospital@gmail.com";
 
     // Form Data
     $name    = $_POST['name'] ?? '';
@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Headers
     $headers  = "From: CNS Website <no-reply@cnsneurohospital.com>\r\n";
-    $headers .= "Reply-To: paletteproductiondevelopers@gmail.com\r\n";
+    $headers .= "Reply-To:cnsneurohospital@gmail.com\r\n";
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
