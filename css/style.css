@@ -11884,10 +11884,10 @@ textarea.form-control {
 }
 
 .ftco-section {
-  padding-top: 80px;
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-bottom: 0px;
+  padding-top: 20px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 20px;
   position: relative;
 }
 @media (max-width: 767.98px) {
