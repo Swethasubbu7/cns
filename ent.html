@@ -216,74 +216,283 @@
 
     <!-- doctor section -->
 
-    <section class="ftco-section bg-white" id="doctor-profile">
-      <div class="container">
-        <div class="row d-flex align-items-center">
-          <div class="col-md-5 ftco-animate">
-            <div class="doctor-img-box">
-              <img
-                src="images/dr.malathi.jpg"
-                class="img-fluid doctor-img-small"
-                alt="Dr Malathi"
-              />
-            </div>
+    <section
+      class="ftco-section"
+      id="doctor-profile"
+      style="
+        padding: 40px 0;
+        background: linear-gradient(to right, #f8fbff, #ffffff);
+      "
+    >
+      <div
+        class="container"
+        style="
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+          padding: 25px;
+          border-radius: 12px;
+        "
+      >
+        <div class="row align-items-center">
+          <!-- Doctor Image -->
+          <div class="col-md-5" style="text-align: center">
+            <img
+              src="images/dr.malathi.jpg"
+              alt="Dr Malathi"
+              style="
+                max-width: 250px;
+                height: auto;
+                border-radius: 12px;
+                transition: 0.3s;
+              "
+              onmouseover="this.style.transform = 'scale(1.05)'"
+              onmouseout="this.style.transform = 'scale(1)'"
+            />
           </div>
 
-          <div class="col-md-7 ftco-animate">
-            <div class="text pt-3">
-              <h3 class="mb-2">Dr. E . MALATHI</h3>
-              <span class="position mb-2 d-block">
-                MBBS, MS (ENT) <br />
+          <!-- Doctor Details -->
+          <div class="col-md-7">
+            <div>
+              <h3 style="margin-bottom: 8px; font-weight: 700; color: #002d72">
+                Dr. E. Malathi
+              </h3>
+
+              <span style="display: block; margin-bottom: 8px; color: #555">
+                MBBS, MS (ENT)<br />
                 Ear, Nose, Throat Surgeon
               </span>
 
-              <p class="mb-3">
+              <p style="margin-bottom: 8px; color: #777">
                 CNS Super Speciality Hospital, Tiruppur, Tamil Nadu
               </p>
 
-              <ul class="ftco-social">
-                <li class="ftco-animate">
-                  <a
-                    href="https://www.facebook.com/p/CNS-Hospitals-100075780626133/"
-                    target="_blank"
-                  >
-                    <span class="icon-facebook"></span>
-                  </a>
-                </li>
-                <li class="ftco-animate">
-                  <a
-                    href="https://www.instagram.com/cnshospitals"
-                    target="_blank"
-                  >
-                    <span class="icon-instagram"></span>
-                  </a>
-                </li>
-                <li class="ftco-animate">
-                  <a
-                    href="https://in.linkedin.com/company/cns-hospitals"
-                    target="_blank"
-                  >
-                    <span class="icon-linkedin"></span>
-                  </a>
-                </li>
-                <li class="ftco-animate">
-                  <a
-                    href="https://www.youtube.com/@RameshNeuro"
-                    target="_blank"
-                  >
-                    <span class="icon-youtube"></span>
-                  </a>
-                </li>
-              </ul>
-
-              <p>
-                <a href="#appointment" class="btn btn-primary">Book Now</a>
+              <!-- Highlights -->
+              <p style="margin-bottom: 10px; color: #555; line-height: 1.6">
+                ✔ ENT Specialist <br />
+                ✔ Sinus & Allergy Treatment <br />
+                ✔ Advanced Surgical Care
               </p>
+
+              <!-- Button -->
+              <a
+                href="#appointment"
+                class="btn btn-primary"
+                style="
+                  padding: 10px 20px;
+                  border-radius: 25px;
+                  font-weight: 600;
+                "
+              >
+                Book Appointment
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <style>
+      /* ===== TABLET VIEW (768px - 1024px) ===== */
+      @media (min-width: 768px) and (max-width: 1024px) {
+        #doctor-profile .row {
+          display: flex;
+          align-items: center;
+        }
+
+        /* Image left */
+        #doctor-profile .col-md-5 {
+          flex: 0 0 40%;
+          max-width: 40%;
+          text-align: center;
+        }
+
+        #doctor-profile img {
+          max-width: 220px;
+          width: 100%;
+        }
+
+        /* Content right */
+        #doctor-profile .col-md-7 {
+          flex: 0 0 60%;
+          max-width: 60%;
+          text-align: left;
+        }
+
+        /* Reduce text size slightly */
+        #doctor-profile h3 {
+          font-size: 22px;
+        }
+
+        #doctor-profile span,
+        #doctor-profile p {
+          font-size: 14px;
+        }
+
+        /* Align social icons left */
+        #doctor-profile ul {
+          justify-content: flex-start;
+        }
+
+        /* Button align left */
+        #doctor-profile .btn {
+          width: auto;
+        }
+      }
+
+      /* ===== MOBILE VIEW (Below 768px) ===== */
+      @media (max-width: 767px) {
+        #doctor-profile .row {
+          flex-direction: column;
+          text-align: center;
+        }
+        #doctor-profile h3 {
+          font-size: 18px;
+          line-height: 1.3;
+          margin-bottom: 6px;
+        }
+        /* Degree & designation */
+        #doctor-profile span {
+          font-size: 13px;
+          line-height: 1.4;
+        }
+        /* Hospital & description */
+        #doctor-profile p {
+          font-size: 13px;
+          line-height: 1.5;
+          margin-bottom: 6px;
+        }
+
+        /* Tick points */
+        #doctor-profile p br {
+          line-height: 1.6;
+        }
+        #doctor-profile .btn {
+          font-size: 14px;
+          padding: 8px 16px;
+        }
+
+        #doctor-profile .col-md-5 {
+          margin-bottom: 15px;
+        }
+
+        #doctor-profile img {
+          max-width: 170px;
+        }
+
+        #doctor-profile .col-md-7 {
+          text-align: center;
+        }
+
+        #doctor-profile ul {
+          justify-content: center;
+        }
+
+        #doctor-profile .btn {
+          width: 100%;
+          max-width: 220px;
+        }
+      }
+    </style>
+    <style>
+      /* ===== TABLET VIEW (768px - 1024px) ===== */
+      @media (min-width: 768px) and (max-width: 1024px) {
+        #doctor-profile .row {
+          display: flex;
+          align-items: center;
+        }
+
+        /* Image left */
+        #doctor-profile .col-md-5 {
+          flex: 0 0 40%;
+          max-width: 40%;
+          text-align: center;
+        }
+
+        #doctor-profile img {
+          max-width: 220px;
+          width: 100%;
+        }
+
+        /* Content right */
+        #doctor-profile .col-md-7 {
+          flex: 0 0 60%;
+          max-width: 60%;
+          text-align: left;
+        }
+
+        /* Reduce text size slightly */
+        #doctor-profile h3 {
+          font-size: 22px;
+        }
+
+        #doctor-profile span,
+        #doctor-profile p {
+          font-size: 14px;
+        }
+
+        /* Align social icons left */
+        #doctor-profile ul {
+          justify-content: flex-start;
+        }
+
+        /* Button align left */
+        #doctor-profile .btn {
+          width: auto;
+        }
+      }
+
+      /* ===== MOBILE VIEW (Below 768px) ===== */
+      @media (max-width: 767px) {
+        #doctor-profile .row {
+          flex-direction: column;
+          text-align: center;
+        }
+        #doctor-profile h3 {
+          font-size: 18px;
+          line-height: 1.3;
+          margin-bottom: 6px;
+        }
+        /* Degree & designation */
+        #doctor-profile span {
+          font-size: 13px;
+          line-height: 1.4;
+        }
+        /* Hospital & description */
+        #doctor-profile p {
+          font-size: 13px;
+          line-height: 1.5;
+          margin-bottom: 6px;
+        }
+
+        /* Tick points */
+        #doctor-profile p br {
+          line-height: 1.6;
+        }
+        #doctor-profile .btn {
+          font-size: 14px;
+          padding: 8px 16px;
+        }
+
+        #doctor-profile .col-md-5 {
+          margin-bottom: 15px;
+        }
+
+        #doctor-profile img {
+          max-width: 170px;
+        }
+
+        #doctor-profile .col-md-7 {
+          text-align: center;
+        }
+
+        #doctor-profile ul {
+          justify-content: center;
+        }
+
+        #doctor-profile .btn {
+          width: 100%;
+          max-width: 220px;
+        }
+      }
+    </style>
     <!-- About and Appointment -->
 
     <section
@@ -512,6 +721,54 @@
         </div>
       </div>
     </section>
+    <style>
+      /* Tablet View Fix */
+      @media (max-width: 992px) {
+        /* Stack both sections */
+        #about-section .row.d-flex {
+          flex-direction: column;
+        }
+
+        /* Left services full width */
+        #about-section .col-md-7 {
+          max-width: 100%;
+          flex: 0 0 100%;
+          padding-bottom: 20px;
+        }
+
+        /* Right form full width */
+        #about-section .col-md-5 {
+          max-width: 100%;
+          flex: 0 0 100%;
+        }
+
+        /* Reduce spacing */
+        .appointment-wrap {
+          padding: 10px !important;
+        }
+
+        /* Make form fields full width */
+        .form-row {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .form-row .form-group {
+          width: 100%;
+          max-width: 100%;
+        }
+
+        /* Improve text spacing */
+        .services .media-body {
+          padding-left: 15px !important;
+        }
+
+        /* Center heading */
+        .heading-section h2 {
+          text-align: center;
+        }
+      }
+    </style>
 
     <!-- Content -->
     <section class="content ent" id="facility">

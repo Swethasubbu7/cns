@@ -433,6 +433,54 @@
         </div>
       </div>
     </section>
+    <style>
+      /* Tablet View Fix */
+      @media (max-width: 992px) {
+        /* Stack both sections */
+        #about-section .row.d-flex {
+          flex-direction: column;
+        }
+
+        /* Left services full width */
+        #about-section .col-md-7 {
+          max-width: 100%;
+          flex: 0 0 100%;
+          padding-bottom: 20px;
+        }
+
+        /* Right form full width */
+        #about-section .col-md-5 {
+          max-width: 100%;
+          flex: 0 0 100%;
+        }
+
+        /* Reduce spacing */
+        .appointment-wrap {
+          padding: 10px !important;
+        }
+
+        /* Make form fields full width */
+        .form-row {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .form-row .form-group {
+          width: 100%;
+          max-width: 100%;
+        }
+
+        /* Improve text spacing */
+        .services .media-body {
+          padding-left: 15px !important;
+        }
+
+        /* Center heading */
+        .heading-section h2 {
+          text-align: center;
+        }
+      }
+    </style>
     <!-- Content -->
     <section class="content obstetrics" id="facility">
       <div class="container">
