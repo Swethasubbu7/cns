@@ -212,7 +212,253 @@
         </div>
       </div>
     </section>
+    <section
+      class="ftco-section"
+      id="doctor-profile"
+      style="
+        padding: 40px 0;
+        background: linear-gradient(to right, #f8fbff, #ffffff);
+      "
+    >
+      <div
+        class="container"
+        style="
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+          padding: 25px;
+          border-radius: 12px;
+        "
+      >
+        <div class="row align-items-center">
+          <!-- Circle Avatar -->
+          <div class="col-md-5 text-center">
+            <div
+              style="
+                width: 160px;
+                height: 160px;
+                margin: auto;
+                border-radius: 50%;
+                background: #e6f0ff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: 0.3s;
+              "
+              onmouseover="this.style.transform = 'scale(1.05)'"
+              onmouseout="this.style.transform = 'scale(1)'"
+            >
+              <span
+                class="icon-brain"
+                style="font-size: 60px; color: #2f80ed"
+              ></span>
+            </div>
+          </div>
 
+          <!-- Details -->
+          <div class="col-md-7">
+            <h3 style="font-weight: 700; color: #002d72">Dr. J.P. Swetha</h3>
+
+            <span style="display: block; color: #555; margin-bottom: 8px">
+              MBBS, MD (Psychiatry)<br />
+              Consultant Psychiatrist
+            </span>
+
+            <p style="color: #777">
+              CNS Super Speciality Hospital, Tiruppur, Tamil Nadu
+            </p>
+
+            <p style="color: #555">
+              ✔ Mental Health Diagnosis <br />
+              ✔ Anxiety & Depression Treatment <br />
+              ✔ Stress & Behavioral Therapy
+            </p>
+
+            <a
+              href="#appointment"
+              class="btn btn-primary"
+              style="padding: 10px 20px; border-radius: 25px"
+            >
+              Book Appointment
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="ftco-section"
+      id="doctor-profile"
+      style="
+        padding: 40px 0;
+        background: linear-gradient(to right, #f8fbff, #ffffff);
+      "
+    >
+      <div
+        class="container"
+        style="
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+          padding: 25px;
+          border-radius: 12px;
+        "
+      >
+        <div class="row align-items-center">
+          <!-- Circle Avatar -->
+          <div class="col-md-5 text-center">
+            <div
+              style="
+                width: 160px;
+                height: 160px;
+                margin: auto;
+                border-radius: 50%;
+                background: #e6f0ff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: 0.3s;
+              "
+              onmouseover="this.style.transform = 'scale(1.05)'"
+              onmouseout="this.style.transform = 'scale(1)'"
+            >
+              <span
+                class="icon-brain"
+                style="font-size: 60px; color: #2f80ed"
+              ></span>
+            </div>
+          </div>
+
+          <!-- Details -->
+          <div class="col-md-7">
+            <h3 style="font-weight: 700; color: #002d72">
+              Dr. N. Sundaramurthy
+            </h3>
+
+            <span style="display: block; color: #555; margin-bottom: 8px">
+              MBBS, MD (Psychiatry)<br />
+              Consultant Psychiatrist
+            </span>
+
+            <p style="color: #777">
+              CNS Super Speciality Hospital, Tiruppur, Tamil Nadu
+            </p>
+
+            <p style="color: #555">
+              ✔ Psychiatric Consultation <br />
+              ✔ Mood & Anxiety Disorder Treatment <br />
+              ✔ Sleep & Stress Management
+            </p>
+
+            <a
+              href="#appointment"
+              class="btn btn-primary"
+              style="padding: 10px 20px; border-radius: 25px"
+            >
+              Book Appointment
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      /* ===== TABLET VIEW (768px - 1024px) ===== */
+      @media (min-width: 768px) and (max-width: 1024px) {
+        #doctor-profile .row {
+          display: flex;
+          align-items: center;
+        }
+
+        /* Image left */
+        #doctor-profile .col-md-5 {
+          flex: 0 0 40%;
+          max-width: 40%;
+          text-align: center;
+        }
+
+        #doctor-profile img {
+          max-width: 220px;
+          width: 100%;
+        }
+
+        /* Content right */
+        #doctor-profile .col-md-7 {
+          flex: 0 0 60%;
+          max-width: 60%;
+          text-align: left;
+        }
+
+        /* Reduce text size slightly */
+        #doctor-profile h3 {
+          font-size: 22px;
+        }
+
+        #doctor-profile span,
+        #doctor-profile p {
+          font-size: 14px;
+        }
+
+        /* Align social icons left */
+        #doctor-profile ul {
+          justify-content: flex-start;
+        }
+
+        /* Button align left */
+        #doctor-profile .btn {
+          width: auto;
+        }
+      }
+
+      /* ===== MOBILE VIEW (Below 768px) ===== */
+      @media (max-width: 767px) {
+        #doctor-profile .row {
+          flex-direction: column;
+          text-align: center;
+        }
+        #doctor-profile h3 {
+          font-size: 18px;
+          line-height: 1.3;
+          margin-bottom: 6px;
+        }
+        /* Degree & designation */
+        #doctor-profile span {
+          font-size: 13px;
+          line-height: 1.4;
+        }
+        /* Hospital & description */
+        #doctor-profile p {
+          font-size: 13px;
+          line-height: 1.5;
+          margin-bottom: 6px;
+        }
+
+        /* Tick points */
+        #doctor-profile p br {
+          line-height: 1.6;
+        }
+        #doctor-profile .btn {
+          font-size: 14px;
+          padding: 8px 16px;
+        }
+
+        #doctor-profile .col-md-5 {
+          margin-bottom: 15px;
+        }
+
+        #doctor-profile img {
+          max-width: 170px;
+        }
+
+        #doctor-profile .col-md-7 {
+          text-align: center;
+        }
+
+        #doctor-profile ul {
+          justify-content: center;
+        }
+
+        #doctor-profile .btn {
+          width: 100%;
+          max-width: 220px;
+        }
+      }
+    </style>
     <!-- About and Appointment -->
 
     <section
@@ -446,6 +692,54 @@
         </div>
       </div>
     </section>
+    <style>
+      /* Tablet View Fix */
+      @media (max-width: 992px) {
+        /* Stack both sections */
+        #about-section .row.d-flex {
+          flex-direction: column;
+        }
+
+        /* Left services full width */
+        #about-section .col-md-7 {
+          max-width: 100%;
+          flex: 0 0 100%;
+          padding-bottom: 20px;
+        }
+
+        /* Right form full width */
+        #about-section .col-md-5 {
+          max-width: 100%;
+          flex: 0 0 100%;
+        }
+
+        /* Reduce spacing */
+        .appointment-wrap {
+          padding: 10px !important;
+        }
+
+        /* Make form fields full width */
+        .form-row {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .form-row .form-group {
+          width: 100%;
+          max-width: 100%;
+        }
+
+        /* Improve text spacing */
+        .services .media-body {
+          padding-left: 15px !important;
+        }
+
+        /* Center heading */
+        .heading-section h2 {
+          text-align: center;
+        }
+      }
+    </style>
 
     <!-- Content -->
     <section class="content psychiatry" id="facility">

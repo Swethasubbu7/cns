@@ -211,76 +211,181 @@
         </div>
       </div>
     </section>
-    <section class="ftco-section bg-white" id="doctor-profile">
-      <div class="container">
-        <div class="row d-flex align-items-center">
-          <!-- Doctor Image -->
-          <div class="col-md-5 ftco-animate">
-            <div class="doctor-img-box">
-              <img
-                src="images/dr.ravindharan.jpg"
-                class="img-fluid doctor-img-small"
-                alt="Dr S Ravindharan"
-              />
-            </div>
+    <section
+      class="ftco-section"
+      id="doctor-profile"
+      style="
+        padding: 40px 0;
+        background: linear-gradient(to right, #f8fbff, #ffffff);
+      "
+    >
+      <div
+        class="container"
+        style="
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+          padding: 25px;
+          border-radius: 12px;
+        "
+      >
+        <div class="row align-items-center">
+          <!-- LEFT IMAGE -->
+          <div class="col-md-5 text-center">
+            <img
+              src="images/dr.kishore.jpg"
+              alt="Dr KM Kishore Rajan"
+              class="doctor-img"
+            />
           </div>
 
-          <!-- Doctor Details -->
-          <div class="col-md-7 ftco-animate">
-            <div class="text pt-3">
-              <h3 class="mb-2">Dr.K.Ravindran</h3>
-              <span class="position mb-2 d-block">
-                BDS MDS(OMFS), Facio Maxillary Surgeon
-              </span>
+          <!-- RIGHT CONTENT -->
+          <div class="col-md-7">
+            <h3 class="doctor-name">Dr. KM Kishore Rajan</h3>
 
-              <p class="mb-3">
-                CNS Super Speciality Hospital, Tiruppur, Tamil Nadu
-              </p>
+            <p class="doctor-degree">MBBS, MS (Ortho)</p>
 
-              <!-- Social Media Icons -->
-              <ul class="ftco-social">
-                <li class="ftco-animate">
-                  <a
-                    href="https://www.facebook.com/p/CNS-Hospitals-100075780626133/"
-                    target="_blank"
-                  >
-                    <span class="icon-facebook"></span>
-                  </a>
-                </li>
-                <li class="ftco-animate">
-                  <a
-                    href="https://www.instagram.com/cnshospitals"
-                    target="_blank"
-                  >
-                    <span class="icon-instagram"></span>
-                  </a>
-                </li>
-                <li class="ftco-animate">
-                  <a
-                    href="https://in.linkedin.com/company/cns-hospitals"
-                    target="_blank"
-                  >
-                    <span class="icon-linkedin"></span>
-                  </a>
-                </li>
-                <li class="ftco-animate">
-                  <a
-                    href="https://www.youtube.com/@RameshNeuro"
-                    target="_blank"
-                  >
-                    <span class="icon-youtube"></span>
-                  </a>
-                </li>
-              </ul>
+            <p class="doctor-role">Orthopaedic & Spine Surgeon Consultant</p>
 
-              <p>
-                <a href="#appointment" class="btn btn-primary">Book Now</a>
-              </p>
-            </div>
+            <p class="doctor-hospital">
+              CNS Super Speciality Hospital, Tiruppur, Tamil Nadu
+            </p>
+
+            <p class="doctor-points">
+              ✔ Orthopaedic Specialist <br />
+              ✔ Spine & Joint Treatment <br />
+              ✔ Fracture & Trauma Care
+            </p>
+
+            <!-- SOCIAL MEDIA -->
+            <ul class="doctor-social">
+              <li><span class="icon-facebook"></span></li>
+              <li><span class="icon-instagram"></span></li>
+              <li><span class="icon-linkedin"></span></li>
+              <li><span class="icon-youtube"></span></li>
+            </ul>
+
+            <a href="#appointment" class="btn doctor-btn"> Book Appointment </a>
           </div>
         </div>
       </div>
     </section>
+
+    <style>
+      /* IMAGE */
+      .doctor-img {
+        max-width: 250px;
+        width: 100%;
+        border-radius: 12px;
+        transition: 0.3s;
+      }
+      .doctor-img:hover {
+        transform: scale(1.05);
+      }
+
+      /* TEXT */
+      .doctor-name {
+        font-size: 22px;
+        font-weight: 700;
+        color: #002d72;
+        margin-bottom: 5px;
+      }
+
+      .doctor-degree {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 3px;
+      }
+
+      .doctor-role {
+        font-size: 14px;
+        color: #444;
+        margin-bottom: 6px;
+      }
+
+      .doctor-hospital {
+        font-size: 13px;
+        color: #777;
+        margin-bottom: 10px;
+      }
+
+      .doctor-points {
+        font-size: 13px;
+        color: #444;
+        margin-bottom: 15px;
+      }
+
+      /* SOCIAL */
+      .doctor-social {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        gap: 10px;
+        margin-bottom: 15px;
+      }
+
+      /* BUTTON */
+      .doctor-btn {
+        background: linear-gradient(to right, #2f80ed, #1c5ed6);
+        color: #fff;
+        padding: 10px 22px;
+        border-radius: 25px;
+        font-weight: 600;
+        display: inline-block;
+      }
+
+      /* ===== TABLET ===== */
+      @media (min-width: 768px) and (max-width: 1024px) {
+        #doctor-profile .col-md-5 {
+          flex: 0 0 40%;
+          max-width: 40%;
+        }
+
+        #doctor-profile .col-md-7 {
+          flex: 0 0 60%;
+          max-width: 60%;
+        }
+
+        .doctor-img {
+          max-width: 220px;
+        }
+      }
+
+      /* ===== MOBILE ===== */
+      @media (max-width: 767px) {
+        #doctor-profile .row {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        #doctor-profile .col-md-5 {
+          margin-bottom: 15px;
+        }
+
+        .doctor-img {
+          max-width: 170px;
+        }
+
+        .doctor-name {
+          font-size: 18px;
+        }
+
+        .doctor-degree,
+        .doctor-role,
+        .doctor-hospital,
+        .doctor-points {
+          font-size: 13px;
+        }
+
+        .doctor-social {
+          justify-content: center;
+        }
+
+        .doctor-btn {
+          width: 100%;
+          max-width: 220px;
+          padding: 10px;
+        }
+      }
+    </style>
     <!-- About and Appointment -->
 
     <section
@@ -509,6 +614,54 @@
         </div>
       </div>
     </section>
+    <style>
+      /* Tablet View Fix */
+      @media (max-width: 992px) {
+        /* Stack both sections */
+        #about-section .row.d-flex {
+          flex-direction: column;
+        }
+
+        /* Left services full width */
+        #about-section .col-md-7 {
+          max-width: 100%;
+          flex: 0 0 100%;
+          padding-bottom: 20px;
+        }
+
+        /* Right form full width */
+        #about-section .col-md-5 {
+          max-width: 100%;
+          flex: 0 0 100%;
+        }
+
+        /* Reduce spacing */
+        .appointment-wrap {
+          padding: 10px !important;
+        }
+
+        /* Make form fields full width */
+        .form-row {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .form-row .form-group {
+          width: 100%;
+          max-width: 100%;
+        }
+
+        /* Improve text spacing */
+        .services .media-body {
+          padding-left: 15px !important;
+        }
+
+        /* Center heading */
+        .heading-section h2 {
+          text-align: center;
+        }
+      }
+    </style>
 
     <!-- Content -->
     <section class="content omfs" id="facility">

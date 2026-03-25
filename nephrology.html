@@ -211,6 +211,210 @@
         </div>
       </div>
     </section>
+
+    <!-- doctor details -->
+
+    <section
+      class="ftco-section"
+      id="doctor-profile"
+      style="
+        padding: 40px 0;
+        background: linear-gradient(to right, #f8fbff, #ffffff);
+      "
+    >
+      <div
+        class="container"
+        style="
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+          padding: 25px;
+          border-radius: 12px;
+        "
+      >
+        <div class="row align-items-center">
+          <!-- Doctor Image -->
+          <div class="col-md-5" style="text-align: center">
+            <img
+              src="images/dr.keerthana.jpg"
+              alt="Dr Keerthana"
+              style="
+                max-width: 250px;
+                height: auto;
+                border-radius: 12px;
+                transition: 0.3s;
+              "
+              onmouseover="this.style.transform = 'scale(1.05)'"
+              onmouseout="this.style.transform = 'scale(1)'"
+            />
+          </div>
+
+          <!-- Doctor Details -->
+          <div class="col-md-7">
+            <div>
+              <h3 style="margin-bottom: 8px; font-weight: 700; color: #002d72">
+                Dr. Keerthana
+              </h3>
+
+              <span
+                style="
+                  display: block;
+                  margin-bottom: 8px;
+                  font-weight: 500;
+                  color: #555;
+                "
+              >
+                MBBS, MD (Anaesthesia)<br />
+                Consultant Anaesthesiologist
+              </span>
+
+              <p style="margin-bottom: 8px; color: #777">
+                CNS Super Speciality Hospital, Tiruppur, Tamil Nadu
+              </p>
+
+              <!-- Highlights -->
+              <p style="margin-bottom: 10px; color: #555; line-height: 1.6">
+                ✔ Anaesthesia & Surgical Care <br />
+                ✔ Critical Care Monitoring <br />
+                ✔ Pain Management & ICU Support
+              </p>
+
+              <!-- Social Media -->
+              <ul
+                style="
+                  list-style: none;
+                  padding: 0;
+                  display: flex;
+                  gap: 10px;
+                  margin-bottom: 15px;
+                "
+              >
+                <li>
+                  <a
+                    href="https://www.facebook.com/p/CNS-Hospitals-100075780626133/"
+                    target="_blank"
+                  >
+                    <span class="icon-facebook"></span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/cnshospitals"
+                    target="_blank"
+                  >
+                    <span class="icon-instagram"></span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://in.linkedin.com/company/cns-hospitals"
+                    target="_blank"
+                  >
+                    <span class="icon-linkedin"></span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/@RameshNeuro"
+                    target="_blank"
+                  >
+                    <span class="icon-youtube"></span>
+                  </a>
+                </li>
+              </ul>
+
+              <!-- Button -->
+              <a
+                href="#appointment"
+                class="btn btn-primary"
+                style="
+                  padding: 10px 20px;
+                  border-radius: 25px;
+                  font-weight: 600;
+                "
+              >
+                Book Appointment
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      /* ===== TABLET VIEW ===== */
+      @media (min-width: 768px) and (max-width: 1024px) {
+        #doctor-profile .row {
+          display: flex;
+          align-items: center;
+        }
+
+        #doctor-profile .col-md-5 {
+          flex: 0 0 40%;
+          max-width: 40%;
+          text-align: center;
+        }
+
+        #doctor-profile img {
+          max-width: 220px;
+          width: 100%;
+        }
+
+        #doctor-profile .col-md-7 {
+          flex: 0 0 60%;
+          max-width: 60%;
+          text-align: left;
+        }
+
+        #doctor-profile h3 {
+          font-size: 22px;
+        }
+
+        #doctor-profile span,
+        #doctor-profile p {
+          font-size: 14px;
+        }
+
+        #doctor-profile ul {
+          justify-content: flex-start;
+        }
+      }
+
+      /* ===== MOBILE VIEW ===== */
+      @media (max-width: 767px) {
+        #doctor-profile .row {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        #doctor-profile .col-md-5 {
+          margin-bottom: 15px;
+        }
+
+        #doctor-profile img {
+          max-width: 170px;
+        }
+
+        #doctor-profile h3 {
+          font-size: 18px;
+          margin-bottom: 6px;
+        }
+
+        #doctor-profile span,
+        #doctor-profile p {
+          font-size: 13px;
+          line-height: 1.5;
+        }
+
+        #doctor-profile ul {
+          justify-content: center;
+        }
+
+        #doctor-profile .btn {
+          width: 100%;
+          max-width: 220px;
+          padding: 10px;
+        }
+      }
+    </style>
     <!-- About and Appointment -->
 
     <section
@@ -439,6 +643,55 @@
         </div>
       </div>
     </section>
+
+    <style>
+      /* Tablet View Fix */
+      @media (max-width: 992px) {
+        /* Stack both sections */
+        #about-section .row.d-flex {
+          flex-direction: column;
+        }
+
+        /* Left services full width */
+        #about-section .col-md-7 {
+          max-width: 100%;
+          flex: 0 0 100%;
+          padding-bottom: 20px;
+        }
+
+        /* Right form full width */
+        #about-section .col-md-5 {
+          max-width: 100%;
+          flex: 0 0 100%;
+        }
+
+        /* Reduce spacing */
+        .appointment-wrap {
+          padding: 10px !important;
+        }
+
+        /* Make form fields full width */
+        .form-row {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .form-row .form-group {
+          width: 100%;
+          max-width: 100%;
+        }
+
+        /* Improve text spacing */
+        .services .media-body {
+          padding-left: 15px !important;
+        }
+
+        /* Center heading */
+        .heading-section h2 {
+          text-align: center;
+        }
+      }
+    </style>
 
     <!-- Content -->
     <section class="content nephrology" id="facility">

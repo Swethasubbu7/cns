@@ -524,6 +524,61 @@
         </div>
       </div>
     </section>
+
+    <style>
+      /* Tablet Fix */
+      @media (max-width: 992px) {
+        #appointment {
+          flex: 0 0 100% !important;
+          max-width: 100% !important;
+        }
+
+        #appointment .form-row {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+        }
+
+        #appointment .form-group {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+
+        #appointment input,
+        #appointment select,
+        #appointment textarea {
+          font-size: 14px;
+          padding: 10px;
+        }
+      }
+
+      /* Mobile Fix */
+      @media (max-width: 576px) {
+        #appointment {
+          padding: 10px;
+        }
+
+        #appointment .appointment-form {
+          padding: 15px !important;
+        }
+
+        #appointment h3 {
+          font-size: 18px;
+        }
+
+        #appointment input,
+        #appointment select,
+        #appointment textarea {
+          font-size: 13px;
+          padding: 8px;
+        }
+
+        #appointment .btn {
+          font-size: 14px;
+          padding: 10px;
+        }
+      }
+    </style>
     <!-- content -->
     <section class="content obstetrics" id="facility">
       <div class="container">
